@@ -3,3 +3,26 @@
 \minitoc
 %--------------------------------------------------
 At first, for the description of prime numbers, we have to look at the set of divisible numbers. Since, apart from $2$, all prime numbers are odd, we will only analyze this numbers. In the whole paper, we will ignore the prime number $2$, because we will see, this makes a lot easier.
+%--------------------------------------------------
+\section{Basic description: Odd-Numbers}
+\label{s:basicdescriptionoddnumbers}
+%--------------------------------------------------
+Be given the set of all odd natural numbers $y \in \mathbb{N}_{> 1}$ through
+
+\begin{equation}
+y_{i}\left(x_{i}\right) := 2x_{i} + 1,
+\label{eq:oddnatnumbers}
+\end{equation}
+
+with $x,i \in \mathbb{N}$. If we expand the definition set of $x$ to $\mathbb{Z}$, we also know
+
+\begin{alignat}{3}
+	y\left(0\right) &= 1 \\
+	\mathrm{and} \quad y(-x) &= 2\left(-x\right) + 1 \notag \\
+	&= -\left(2x - 1\right) \notag \\
+	&= -\left(2\left(x-1\right) + 1\right) \notag \\ 
+	&= -y\left(x-1\right).
+\label{eq:xexpandtoZ}
+\end{alignat}
+
+Later, we will see that this properties can be very useful.
