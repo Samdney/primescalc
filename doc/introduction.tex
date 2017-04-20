@@ -2,11 +2,19 @@
 \label{ch:introduction}
 \minitoc
 %--------------------------------------------------
+In the following paper, I will show that prime numbers can be calculated recursively. I will start with the suggestion of descriptions itself, over different perspectives on this problem, until the final explanation of caculating prime numbers in the most efficient way, as a result from this considerations.
 
-%--------------------------------------------------
-%\section{A}
-%\label{s:A}
-%--------------------------------------------------
+\vspace{0.3cm}
+Let's start with the definition of prime numbers itself.
+
+\begin{definition}[Prime numbers]
+	Every natural number greater than one which has no positive integer divisors apart from one and itself is called Prime Number or just only Prime.
+
+	\vspace{0.3cm}
+	Be $\mathcal{P}$ the set of all prime numbers $p$. So we can write
+	\[ \mathcal{P} := \{ p \in \mathbb{N}_{> 1}\ | \ \forall n \in \mathbb{N}_{> 1} \setminus \{p\} : \ n \nmid p \} .\]
+	Hence, the first prime numbers are $\mathcal{P} := \{2, 3, 5, 7, 11, 13, 17, 19, 23, \dots\}$.
+\label{def:primenumbers}
+\end{definition}
 
 
-%--------------------------------------------------
