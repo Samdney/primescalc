@@ -8,14 +8,12 @@ At first, for the description of prime numbers, we have to look at the set of di
 \label{s:basicdescriptionoddnumbers}
 %--------------------------------------------------
 Be given the set of all odd natural numbers $y \in \mathbb{N}_{> 1}$ through
-
 \begin{equation}
 y_{i}\left(x_{i}\right) := 2x_{i} + 1,
 \label{eq:oddnatnumbers}
 \end{equation}
 
 with $x,i \in \mathbb{N}$. If we expand the definition set of $x$ to $\mathbb{Z}$, we also know
-
 \begin{alignat}{3}
 	y\left(0\right) &= 1 \\
 	\mathrm{and} \quad y(-x) &= 2\left(-x\right) + 1 \notag \\
@@ -26,3 +24,59 @@ with $x,i \in \mathbb{N}$. If we expand the definition set of $x$ to $\mathbb{Z}
 \end{alignat}
 
 Later, we will see that this properties can be very useful.
+%--------------------------------------------------
+\section{Basic description: Odd-Divisible Numbers}
+\label{s:basicdescriptionodddivisiblenumbers}
+%--------------------------------------------------
+Next, we look at all odd-divisible numbers. We know, they can't have a factor which is a multiple of $2$. Hence, we get an equation which describes all odd-divisible numbers by
+\begin{alignat}{3}
+	y_{i,j}\left(x_{i},x_{j}\right) &= y_{i}\left(x_{i}\right) \cdot y_{j}\left(x_{j}\right) \notag \\
+	&= \left(2x_{i} + 1\right)\left(2x_{j} + 1\right) \notag \\
+	&= 2^{2} x_{i} x_{j} + 2x_{i} + 2x_{j} + 1 \notag \\
+	&= 2\left(\underbrace{2x_{i}x_{j} + x_{i} + x_{j}}_{=:x_{i,j}}\right) + 1 \notag \\
+	&= y_{i,j}\left(x_{i,j}\right).
+\label{eq:odddivnumbers}
+\end{alignat}
+
+If we expand again our sets to $\mathbb{Z}$, we receive additional cases. At first, assume at one factor is $y\left(0\right) = 1$. We see directly
+\begin{alignat}{3}
+	y_{0,j}\left(0,x_{j}\right) &= y_{0}\left(0\right) \cdot y_{j}\left(x_{j}\right) \notag \\
+	&= 1 \cdot \left(2x_{j} + 1\right) \notag \\
+	&= 2x_{j} + 1 \notag \\
+	&= y_{j}\left(x_{j}\right) \\
+	\mathrm{respectively} \quad y_{i,0}\left(x_{i},0\right) &= y_{i}\left(x_{i}\right).
+\label{eq:onefactor1}
+\end{alignat}
+
+Next, assume we have one factor with $y\left(-x\right)$.
+\begin{alignat}{3}
+	y_{i,j}\left(-x_{i},x_{j}\right) & = y_{i}\left(-x_{i}\right) \cdot y_{j}\left(x_{j}\right) \notag \\
+	&= \left(2\left(-x_{i}\right) + 1\right)\left(2x_{j} + 1\right) \notag \\
+	&= -2^{2}x_{i}x_{j} - 2x_{i} + 2x_{j} + 1 \notag \\
+	&= -\left(2\left(2x_{i}x_{j} + x_{i} - x_{j} - 1\right) + 1\right) \notag \\
+	&= -\left(2\left(2x_{i}x_{j} + x_{i} - 2x_{j} + x_{j} -1\right) + 1\right) \notag \\
+	&= -\left(2\left(2\left(x_{i} - 1\right)x_{j} + \left(x_{i} - 1\right) + x_{j}\right) + 1\right) \notag \\
+	&= -y_{i}\left(x_{i} - 1\right) \cdot y_{j}\left(x_{j}\right) \\
+	\mathrm{respectively} \quad y_{i,j}\left(x_{i},-x_{j}\right) &= -y_{i}\left(x_{i}\right) \cdot y_{j}\left(x_{j} - 1\right)
+\label{eq:onefactorminus}
+\end{alignat}
+
+In the case of two negative factors, we have
+\begin{alignat}{3}
+	y_{i,j}\left(-x_{i},-x_{j}\right) &= y_{i}\left(-x_{i}\right) \cdot y_{j}\left(-x_{j}\right) \notag \\
+	&= \left(2\left(-x_{i}\right) + 1\right)\left(2\left(-x_{j}\right) + 1\right) \notag \\
+	&= \left(2x_{i} - 1\right)\left(2x_{j} - 1\right) \notag \\
+	&= 2^{2}x_{i}x_{j} - 2x_{i} - 2x_{j} + 1 \notag \\
+	&= 2\left(2x_{i}x_{j} - x_{i} - x_{j}\right) + 1 \notag \\
+	&= \left(2x_{i} - 2 + 1\right)\left(2x_{j} - 2 + 1\right) \notag \\
+	&= \left(2\left(x_{i} - 1\right) + 1\right)\left(2\left(x_{j} - 1\right) + 1\right) \notag \\
+	&= \left(-1\right)y_{i}\left(x_{i} - 1\right)\left(-1\right)y_{j}\left(x_{j} - 1\right) \notag \\
+	&= y_{i,j}\left(x_{i} - 1,x_{j} - 1\right).
+\label{eq:twofactorminus}
+\end{alignat}
+
+
+
+
+
+
