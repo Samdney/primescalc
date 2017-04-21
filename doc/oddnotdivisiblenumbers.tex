@@ -3,3 +3,64 @@
 \minitoc
 %--------------------------------------------------
 After we spent time with the set of all odd-divisible numbers, now, we switch to the set of all odd numbers which are not divisible by a particular other odd number.
+%--------------------------------------------------
+\section{Representation: Odd-Divisible Numbers}
+\label{s:repodddivnumbers}
+%--------------------------------------------------
+Let's look again at (\ref{eq:oddnumbdiffpers1})
+\[ y_{i,j}\left(x_{i},x_{j}\right) = 2\left(\left(2x_{i} + 1\right)x_{j} + x_{i}\right) + 1 ,\]
+and its belonging values.
+\begin{itemize}
+	\item Be $x_{i} = 1$:
+		\begin{equation}
+			y_{1,j}\left(1,x_{j}\right) = 2\left(3x_{j} + 1\right) + 1, \quad x_{1,j} = 3x_{j} + 1
+		\label{eq:repx1odddivnumb}
+		\end{equation}
+
+		\begin{table}[H]
+		\centering
+		\caption{The first ten values for (\ref{eq:repx1odddivnumb}).}
+		\begin{tabular}{c|cccccccccc}
+  			$x_{j}$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+  		\hline	$x_{1,j}$ & 4 & 7 & 10 & 13 & 16 & 19 & 22 & 25 & 28 & 31 \\
+  			$y_{1,j}$ & 9 & 15 & 21 & 27 & 33 & 39 & 45 & 51 & 57 & 63 \\
+		\end{tabular}
+		\label{tab:repoddivnumbx1}
+		\end{table}
+
+	\item Be $x_{i} = 2$:
+		\begin{equation}
+			y_{2,j}\left(2,x_{j}\right) = 2\left(5x_{j} + 2\right) + 1, \quad x_{2,j} = 5x_{j} + 2
+		\label{eq:repx2odddivnumb}
+		\end{equation}
+
+		\begin{table}[H]
+		\centering
+		\caption{The first ten values for (\ref{eq:repx2odddivnumb}).}
+		\begin{tabular}{c|cccccccccc}
+  			$x_{j}$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+  		\hline	$x_{2,j}$ & 7 & 12 & 17 & 23 & 28 & 33 & 38 & 43 & 48 & 53 \\
+  			$y_{2,j}$ & 15 & 25 & 35 & 47 & 57 & 67 & 77 & 87 & 97 & 107 \\
+		\end{tabular}
+		\label{tab:repoddivnumbx2}
+		\end{table}
+	
+	\item Be $x_{i} = 3$:
+		\begin{equation}
+			y_{3,j}\left(3,x_{j}\right) = 2\left(7x_{j} + 3\right) + 1, \quad x_{3,j} = 7x_{j} + 3
+		\label{eq:repx3odddivnumb}
+		\end{equation}
+
+		\begin{table}[H]
+		\centering
+		\caption{The first ten values for (\ref{eq:repx3odddivnumb}).}
+		\begin{tabular}{c|cccccccccc}
+  			$x_{j}$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+  		\hline	$x_{3,j}$ & 10 & 17 & 24 & 31 & 38 & 45 & 52 & 59 & 66 & 73 \\
+  			$y_{3,j}$ & 21 & 35 & 49 & 63 & 77 & 91 & 105 & 119 & 133 & 147 \\
+		\end{tabular}
+		\label{tab:repoddivnumbx3}
+		\end{table}
+	\item Be $x_{i} = \dots$: $\dots$.
+\label{it:repodddivnumb}
+\end{itemize}
