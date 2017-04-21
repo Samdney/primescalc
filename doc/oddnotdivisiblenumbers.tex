@@ -69,7 +69,77 @@ and its belonging values.
 \section{Representation: Odd-Not-Divisible Numbers}
 \label{s:repoddnotdivnumbers}
 %--------------------------------------------------
-Now, we take again $y_{i,j}\left(x_{i},x_{j}\right) = 2\left(\left(2x_{i} + 1\right)x_{j} + x_{i}\right) + 1$ and rephrase it into an equation which descripes all odd numbers which are not divisible by $2x_{i} + 1$.
+Now, we take again $y_{i,j}\left(x_{i},x_{j}\right) = 2\left(\left(2x_{i} + 1\right)x_{j} + x_{i}\right) + 1$ and rephrase it into an equation which descripes all odd numbers which are not divisible by $2x_{i} + 1$. \\
+That's not very hard. We can write
+\begin{equation}
+	y_{i,j}\left(x_{i},x_{j}\right) = 2\left(\left(2x_{i} + 1\right)x_{j} + x_{i} - \mu\left(x_{i}\right)\right) + 1,
+\label{eq:repoddnotdivnumb}
+\end{equation}
+with
+\begin{equation}
+	\mu\left(x_{i}\right) = 1,\dots,2x_{i}, \quad \mu\left(x_{i}\right) \in \mathbb{N}.
+\label{eq:defmu}
+\end{equation}
+
+Let's have a short look at the first values for $x_{i} = 1,2,3$.
+\begin{itemize}
+	\item Be $x_{i} = 1$:
+		\begin{equation}
+			y_{1,j}\left(1,x_{j}\right) = 2\left(3x_{j} + 1 - \mu\left(1\right)\right) + 1, \quad \mu\left(1\right) = 1,2, \quad x_{1,j} = 3x_{j} + 1
+		\label{eq:repx1oddnotdivnumb}
+		\end{equation}
+
+		\begin{table}[H]
+		\centering
+		\caption{The first values for (\ref{eq:repx1oddnotdivnumb}).}
+		\begin{tabular}{c|cccccccccc}
+  			$x_{j}$ & 1 &  & 2 &  & 3 &  & 4 &  & 5 &  \\
+			$\mu\left(1\right)$ & 1 & 2 & 1 & 2 & 1 & 2 & 1 & 2 & 1 & 2 \\
+  		\hline	$x_{1,j}$ & 2 & 3 & 5 & 6 & 8 & 9 & 11 & 12 & 14 & 15 \\
+  			$y_{1,j}$ & 5 & 7 & 11 & 13 & 17 & 19 & 23 & 25 & 29 & 31 \\
+		\end{tabular}
+		\label{tab:repodnotdivnumbx1}
+		\end{table}
+
+	\item Be $x_{i} = 2$:
+		\begin{equation}
+			y_{2,j}\left(2,x_{j}\right) = 2\left(5x_{j} + 2 - \mu\left(2\right)\right) + 1, \quad \mu\left(2\right) = 1,\dots,4 \quad x_{2,j} = 5x_{j} + 1
+		\label{eq:repx2oddnotdivnumb}
+		\end{equation}
+
+		\begin{table}[H]
+		\centering
+		\caption{The first values for (\ref{eq:repx2oddnotdivnumb}).}
+		\begin{tabular}{c|cccccccccc}
+  			$x_{j}$ & 1 &  &  &  & 2 &  &  &  & 3 &  \\
+			$\mu\left(1\right)$ & 1 & 2 & 3 & 4 & 1 & 2 & 3 & 4 & 1 & 2 \\
+  		\hline	$x_{1,j}$ & 3 & 4 & 5 & 6 & 8 & 9 & 10 & 11 & 13 & 14 \\
+  			$y_{1,j}$ & 7 & 9 & 11 & 13 & 17 & 19 & 21 & 23 & 27 & 29 \\
+		\end{tabular}
+		\label{tab:repodnotdivnumbx2}
+		\end{table}
+
+	\item Be $x_{i} = 3$:
+		\begin{equation}
+			y_{3,j}\left(3,x_{j}\right) = 2\left(7x_{j} + 1 - \mu\left(3\right)\right) + 1, \quad \mu\left(3\right) = 1,\dots,6 \quad x_{3,j} = 7x_{j} + 1
+		\label{eq:repx3oddnotdivnumb}
+		\end{equation}
+
+		\begin{table}[H]
+		\centering
+		\caption{The first values for (\ref{eq:repx3oddnotdivnumb}).}
+		\begin{tabular}{c|cccccccccc}
+  			$x_{j}$ & 1 &  &  &  &  &  & 1 &  &  &  \\
+			$\mu\left(1\right)$ & 1 & 2 & 3 & 4 & 5 & 6 & 1 & 2 & 3 & 4 \\
+  		\hline	$x_{1,j}$ & 4 & 5 & 6 & 7 & 8 & 9 & 11 & 12 & 13 & 14 \\
+  			$y_{1,j}$ & 9 & 11 & 13 & 15 & 17 & 19 & 23 & 25 & 17 & 29 \\
+		\end{tabular}
+		\label{tab:repodnotdivnumbx3}
+		\end{table}
+
+	\item Be $x_{i} = \dots$: $\dots$
+\label{it:exampledndn}
+\end{itemize}
 
 
 
