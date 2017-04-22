@@ -113,8 +113,8 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 		\begin{tabular}{c|cccccccccc}
   			$x_{j}$ & 1 &  &  &  & 2 &  &  &  & 3 &  \\
 			$\mu\left(1\right)$ & 1 & 2 & 3 & 4 & 1 & 2 & 3 & 4 & 1 & 2 \\
-  		\hline	$x_{1,j}$ & 3 & 4 & 5 & 6 & 8 & 9 & 10 & 11 & 13 & 14 \\
-  			$y_{1,j}$ & 7 & 9 & 11 & 13 & 17 & 19 & 21 & 23 & 27 & 29 \\
+  		\hline	$x_{2,j}$ & 3 & 4 & 5 & 6 & 8 & 9 & 10 & 11 & 13 & 14 \\
+  			$y_{2,j}$ & 7 & 9 & 11 & 13 & 17 & 19 & 21 & 23 & 27 & 29 \\
 		\end{tabular}
 		\label{tab:repodnotdivnumbx2}
 		\end{table}
@@ -131,8 +131,8 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 		\begin{tabular}{c|cccccccccc}
   			$x_{j}$ & 1 &  &  &  &  &  & 1 &  &  &  \\
 			$\mu\left(1\right)$ & 1 & 2 & 3 & 4 & 5 & 6 & 1 & 2 & 3 & 4 \\
-  		\hline	$x_{1,j}$ & 4 & 5 & 6 & 7 & 8 & 9 & 11 & 12 & 13 & 14 \\
-  			$y_{1,j}$ & 9 & 11 & 13 & 15 & 17 & 19 & 23 & 25 & 17 & 29 \\
+  		\hline	$x_{3,j}$ & 4 & 5 & 6 & 7 & 8 & 9 & 11 & 12 & 13 & 14 \\
+  			$y_{3,j}$ & 9 & 11 & 13 & 15 & 17 & 19 & 23 & 25 & 17 & 29 \\
 		\end{tabular}
 		\label{tab:repodnotdivnumbx3}
 		\end{table}
@@ -140,6 +140,11 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 	\item Be $x_{i} = \dots$: $\dots$
 \label{it:exampledndn}
 \end{itemize}
+
+\begin{remark}[Value set]
+	You can see, the valid value set start not till $x_{i,j} = x_{i} + 1$.
+\label{lab:notdef}
+\end{remark}
 
 %--------------------------------------------------
 \section{Odd-Not-Divisible Numbers: Intersection}
@@ -160,14 +165,3 @@ We do the intersection:
 \end{alignat}
 For the second one, we used $x_{i}^{\left(2\right)} = x_{i}^{\left(1\right)} + \Delta x_{i}^{\left(1,2\right)}$, $x_{i}^{\left(2\right)} > x_{i}^{\left(1\right)}$ and $\Delta x_{i}^{\left(1,2\right)} \in \mathbb{N}$.\\
 To solve (\ref{eq:intersection1}) respectively (\ref{eq:intersection2}), we recognize that we have the boundary condition, that $\left(2x_{i}^{\left(1\right)} + 1\right)$ and $\left(2x_{i}^{\left(2\right)} + 1\right)$ must not have any common factors.
-
-
-
-
-
-
-
-
-
-
-
