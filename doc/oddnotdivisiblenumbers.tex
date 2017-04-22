@@ -145,7 +145,23 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 \section{Odd-Not-Divisible Numbers: Intersection}
 \label{s:oddnotdivnuminter}
 %--------------------------------------------------
-Now we look at the intersection of two equation of the type (\ref{eq:repoddnotdivnumb}) with (\ref{eq:defmu}).
+Now we look at the intersection of two equations of the type (\ref{eq:repoddnotdivnumb}) with (\ref{eq:defmu}). Hence, we start with 
+\begin{alignat}{3}
+	y_{i,j}^{\left(1\right)}\left(x_{i}^{\left(1\right)},x_{j}^{\left(1\right)}\right) &= 2\left(\left(2x_{i}^{\left(1\right)} + 1\right)x_{j}^{\left(1\right)} + x_{i}^{\left(1\right)} - \mu\left(x_{i}^{\left(1\right)}\right)\right) + 1 \notag \\
+	\mu\left(x_{i}^{\left(1\right)}\right) &= 1,\dots,2x_{i}^{\left(1\right)} \label{eq:eqsstartint1} \\
+	\mathrm{and} \quad y_{i,j}^{\left(2\right)}\left(x_{i}^{\left(2\right)},x_{j}^{\left(2\right)}\right) &= 2\left(\left(2x_{i}^{\left(2\right)} + 1\right)x_{j}^{\left(2\right)} + x_{i}^{\left(2\right)} - \mu\left(x_{i}^{\left(2\right)}\right)\right) + 1 \notag \\
+	\mu\left(x_{i}^{\left(2\right)}\right) &= 1,\dots,2x_{i}^{\left(2\right)}. \label{eq:eqsstartint2}
+\end{alignat}
+
+We do the intersection:
+\begin{alignat}{3}
+	0 &= \left(2x_{i}^{\left(1\right)} + 1\right)x_{j}^{\left(1\right)} - \left(2x_{i}^{\left(2\right)} + 1\right)x_{j}^{\left(2\right)} + x_{i}^{\left(1\right)} - x_{i}^{\left(2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right) \label{eq:intersection1} \\
+	\Leftrightarrow \quad 0 &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - \left(2x_{j}^{\left(2\right)} + 1\right)\Delta x_{i}^{\left(1,2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right) \label{eq:intersection2}
+\end{alignat}
+For the second one, we used $x_{i}^{\left(2\right)} = x_{i}^{\left(1\right)} + \Delta x_{i}^{\left(1,2\right)}$, $x_{i}^{\left(2\right)} > x_{i}^{\left(1\right)}$ and $\Delta x_{i}^{\left(1,2\right)} \in \mathbb{N}$.\\
+To solve (\ref{eq:intersection1}) respectively (\ref{eq:intersection2}), we recognize that we have the boundary condition, that $\left(2x_{i}^{\left(1\right)} + 1\right)$ and $\left(2x_{i}^{\left(2\right)} + 1\right)$ must not have any common factors.
+
+
 
 
 
