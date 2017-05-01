@@ -11,7 +11,7 @@ Let's look again at (\ref{eq:oddnumbdiffpers1})
 \[ y_{i,j}\left(x_{i},x_{j}\right) = 2\left(\left(2x_{i} + 1\right)x_{j} + x_{i}\right) + 1 ,\]
 and its belonging values.
 \begin{itemize}
-	\item Be $x_{i} = 1$:
+	\item Be $x_{1} = 1$:
 		\begin{equation}
 			y_{1,j}\left(1,x_{j}\right) = 2\left(3x_{j} + 1\right) + 1, \quad x_{1,j} = 3x_{j} + 1
 		\label{eq:repx1odddivnumb}
@@ -28,7 +28,7 @@ and its belonging values.
 		\label{tab:repoddivnumbx1}
 		\end{table}
 
-	\item Be $x_{i} = 2$:
+	\item Be $x_{2} = 2$:
 		\begin{equation}
 			y_{2,j}\left(2,x_{j}\right) = 2\left(5x_{j} + 2\right) + 1, \quad x_{2,j} = 5x_{j} + 2
 		\label{eq:repx2odddivnumb}
@@ -45,7 +45,7 @@ and its belonging values.
 		\label{tab:repoddivnumbx2}
 		\end{table}
 	
-	\item Be $x_{i} = 3$:
+	\item Be $x_{3} = 3$:
 		\begin{equation}
 			y_{3,j}\left(3,x_{j}\right) = 2\left(7x_{j} + 3\right) + 1, \quad x_{3,j} = 7x_{j} + 3
 		\label{eq:repx3odddivnumb}
@@ -65,6 +65,17 @@ and its belonging values.
 \label{it:repodddivnumb}
 \end{itemize}
 
+Now, let us also have a look at the extension to $\mathbb{Z}$. At first, we do the change $x_{i} \rightarrow -x_{i}$. 
+\begin{equation}
+	y_{i,j}\left(x_{i},x_{j}\right) = -\left(2\left(\left(2\left(x_{i} - 1\right) + 1\right)x_{j} + \left(x_{i} - 1\right)\right) + 1\right)
+\label{eq:repodddivnumbers_negi}
+\end{equation}
+To have attention on this case will still play an role in the next sections. Now, we do the change $x_{j} \rightarrow -x_{j}$.
+\begin{equation}
+	y_{i,j}\left(x_{i},x_{j}\right) = -\left(2\left(\left(2x_{i} + 1\right)\left(x_{j} - 1\right) + x_{i}\right) + 1\right)
+\label{eq:repodddivnumbers_negj}
+\end{equation}
+That's a simple case. We don't have to do anymore. 
 %--------------------------------------------------
 \section{Representation: Odd-Not-Divisible Numbers}
 \label{s:repoddnotdivnumbers}
@@ -83,7 +94,7 @@ with
 
 Let's have a short look at the first values for $x_{i} = 1,2,3$.
 \begin{itemize}
-	\item Be $x_{i} = 1$:
+	\item Be $x_{1} = 1$:
 		\begin{equation}
 			y_{1,j}\left(1,x_{j}\right) = 2\left(3x_{j} + 1 - \mu\left(1\right)\right) + 1, \quad \mu\left(1\right) = 1,2, \quad x_{1,j} = 3x_{j} + 1
 		\label{eq:repx1oddnotdivnumb}
@@ -101,7 +112,7 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 		\label{tab:repodnotdivnumbx1}
 		\end{table}
 
-	\item Be $x_{i} = 2$:
+	\item Be $x_{2} = 2$:
 		\begin{equation}
 			y_{2,j}\left(2,x_{j}\right) = 2\left(5x_{j} + 2 - \mu\left(2\right)\right) + 1, \quad \mu\left(2\right) = 1,\dots,4 \quad x_{2,j} = 5x_{j} + 1
 		\label{eq:repx2oddnotdivnumb}
@@ -119,7 +130,7 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 		\label{tab:repodnotdivnumbx2}
 		\end{table}
 
-	\item Be $x_{i} = 3$:
+	\item Be $x_{3} = 3$:
 		\begin{equation}
 			y_{3,j}\left(3,x_{j}\right) = 2\left(7x_{j} + 1 - \mu\left(3\right)\right) + 1, \quad \mu\left(3\right) = 1,\dots,6 \quad x_{3,j} = 7x_{j} + 1
 		\label{eq:repx3oddnotdivnumb}
