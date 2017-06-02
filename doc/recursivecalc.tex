@@ -8,10 +8,15 @@ In this section, now, we do the final recursive calculation. To understand the d
 \section{Recursion step: $n^{\left(0\right)} = 0$}
 \label{s:recursionstepn0_0}
 %--------------------------------------------------
+%--------------------------------------------------
+\subsection{Calculation}
+\label{ss:calcualtionstepn0_0}
+%--------------------------------------------------
 Let's start with our step zero. It's called zero, since we start with the simplest first possible prime generation. Since we know $3$ is the smallest odd number at all, we know $3$ has to be a prime. Hence we have our first prime.
-
-\vspace{0.3cm}
-\textbf{Results of step $n^{\left(0\right)} = 0$}:
+%--------------------------------------------------
+\subsection{Results}
+\label{ss:resultsstepn0_0}
+%--------------------------------------------------
 \begin{itemize}
 	\item Known prime $x_{i,j}$: $1$
 	\item Known prime $y_{i,j}$: $3$
@@ -20,11 +25,70 @@ Let's start with our step zero. It's called zero, since we start with the simple
 \end{itemize}
 
 That's of course not much and trivial, but hey, it's a beginning!
+%--------------------------------------------------
+\section{Recursion step: $n^{\left(0\right)} = 1$}
+\label{s:recursionstepn0_1}
+%--------------------------------------------------
+%--------------------------------------------------
+\subsection{Calculation}
+\label{ss:calcualtionstepn0_1}
+%--------------------------------------------------
+Now, we can start with our first step. From $n^{\left(0\right)} = 0$, we know $3(1)$.
 
+\vspace{0.3cm}
+\textbf{Notation Note:} From now on I will write $y\left(x\right)$ for shortness. For example, $3(1)$ means $3 = 2\cdot 1 + 1$. If I only write $1$, I mean $x = 1$.
 
+\vspace{0.3cm}
+So, let's look again at the values for $x_{1,j}$ from 
+\begin{equation}
+	y_{1,j}\left(1,x_{j}\right) = 2\left(3x_{j} + 1\right) + 1, \quad x_{1,j} = 3x_{j} + 1.
+\label{eq:stepn0_1_valuesfordiv3}
+\end{equation}
 
+\begin{table}[H]
+\centering
+\caption{The first values for $x_{1,j}$ are marked in bold. Italic values are within the not describable range.}
+\begin{tabular}{c|ccccccccccccccccccc}
+	$x_{j}$ & -- & -- & -- & 1 & -- & -- & 2 & --  & -- & 3 & -- & -- & 4 & -- & -- & 5 & -- & -- & 6 \\
+\hline	$x_{1,j}$ & \textit{1} & 2 & 3 & \textbf{4} & 5 & 6 & \textbf{7} & 8 & 9 & \textbf{10} & 11 & 12 & \textbf{13} & 14 & 15 & \textbf{16} & 17 & 18 & \textbf{19}
+\end{tabular}
+\label{tab:stepn0_1_valuesfordiv3}
+\end{table}
 
+What we can see from our table \ref{tab:stepn0_1_valuesfordiv3} are the next two sure primes, the numbers $5(2)$ and $7(3)$. All larger numbers could theoretically still have a divider, hence we only know this two additional numbers surely, at the moment.
 
+\vspace{0.3cm}
+We can describe this two numbers with (\ref{eq:repoddnotdivnumb}) and (\ref{eq:defmu}) by
+
+\begin{equation}
+	x\left(1,1\right) = 3\cdot 1 + 1 - \mu\left(1\right),
+\label{eq:stepn0_1_eqfordiv3res}
+\end{equation}
+with
+\begin{equation}
+	\mu\left(1\right) = 1,2.
+\label{eq:stepn0_1_eqfordiv3res}
+\end{equation}
+and a maximum value for $x_{j} = 1$.
+%--------------------------------------------------
+\subsection{Results}
+\label{ss:resultsstepn0_1}
+%--------------------------------------------------
+\textbf{Only from step $n^{\left(0\right)} = 1$}:
+\begin{itemize}
+	\item Known prime $x_{i,j}$: $2,3$
+	\item Known primes $y_{i,j}$: $5,7$
+	\item Known prime number range for $x_{i,j}$: $[2,4]$
+	\item Known prime number range for $y_{i,j}$: $[5,9]$
+\end{itemize}
+
+\textbf{From all steps until now}:
+\begin{itemize}
+	\item Known prime $x_{i,j}$: $1,2,3$
+	\item Known primes $y_{i,j}$: $3,5,7$
+	\item Known prime number range for $x_{i,j}$: $[1,4]$
+	\item Known prime number range for $y_{i,j}$: $[1,9]$
+\end{itemize}
 
 
 
