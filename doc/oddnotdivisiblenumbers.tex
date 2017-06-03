@@ -158,16 +158,6 @@ Let's have a short look at the first values for $x_{i} = 1,2,3$.
 \label{lab:notdef}
 \end{remark}
 
-
-
-
-
-
-
-
-
-
-
 %--------------------------------------------------
 \section{Odd-Not-Divisible Numbers: Intersection}
 \label{s:oddnotdivnuminter}
@@ -183,7 +173,49 @@ Now we look at the intersection of two equations of the type (\ref{eq:repoddnotd
 We do the intersection:
 \begin{alignat}{3}
 	0 &= \left(2x_{i}^{\left(1\right)} + 1\right)x_{j}^{\left(1\right)} - \left(2x_{i}^{\left(2\right)} + 1\right)x_{j}^{\left(2\right)} + x_{i}^{\left(1\right)} - x_{i}^{\left(2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right) \label{eq:intersection1} \\
-	\Leftrightarrow \quad 0 &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - \left(2x_{j}^{\left(2\right)} + 1\right)\Delta x_{i}^{\left(1,2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right) \label{eq:intersection2}
+	 &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - 2\Delta x_{i}^{\left(1,2\right)} x_{j}^{\left(2\right)} - \Delta x_{i}^{\left(1,2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right)\label{eq:intersection2} \\
+	 &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - \left(2x_{j}^{\left(2\right)} + 1\right)\Delta x_{i}^{\left(1,2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right) \label{eq:intersection3}
 \end{alignat}
+
 For the second one, we used $x_{i}^{\left(2\right)} = x_{i}^{\left(1\right)} + \Delta x_{i}^{\left(1,2\right)}$, $x_{i}^{\left(2\right)} > x_{i}^{\left(1\right)}$ and $\Delta x_{i}^{\left(1,2\right)} \in \mathbb{N}$.\\
-To solve (\ref{eq:intersection1}) respectively (\ref{eq:intersection2}), we recognize that we have the boundary constraint, that $\left(2x_{i}^{\left(1\right)} + 1\right)$ and $\left(2x_{i}^{\left(2\right)} + 1\right)$ must not have any common factors.
+To solve (\ref{eq:intersection1}) respectively (\ref{eq:intersection2}), we recognize that we have the boundary constraint, that $\left(2x_{i}^{\left(1\right)} + 1\right)$ and $\left(2x_{i}^{\left(2\right)} + 1\right)$ must not have any common factors.\\
+
+Let's look at the case $\Delta x_{i}^{\left(1,2\right)} = 1$.
+\begin{alignat}{3}
+	0 &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - 2x_{j}^{\left(2\right)} - 1 - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right)\label{eq:intersection2_caseDeltax1} \\
+	 &= \left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - \left(2x_{i}^{\left(1\right)} + 1\right)^{-1} \left(2x_{j}^{\left(2\right)} + 1 + \mu\left(x_{i}^{\left(1\right)} \right) - \mu\left(x_{i}^{\left(2\right)}\right)\right) \label{eq:intersection2_caseDeltax1_s1}
+\end{alignat}
+
+Now, let be 
+\begin{equation}
+	x_{j}^{\left(2\right)} = \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)}.
+\label{eq:solxj2delta1}
+\end{equation}
+
+\begin{alignat}{3}
+	0 &= x_{j}^{\left(1\right)} - \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)} - \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right) \label{eq:soldelta1_1} \\
+	&= x_{j}^{\left(1\right)} - \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)\left(x_{i}^{\left(1\right)} + 1\right) \label{eq:soldelta1_2}.
+\end{alignat}
+
+It follows
+\begin{equation}
+	x_{j}^{\left(1\right)} = \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)\left(x_{i}^{\left(1\right)} + 1\right).
+\label{eq:solxj1delta1}
+\end{equation}
+
+The equations (\ref{eq:solxj2delta1}) and (\ref{eq:solxj1delta1}) give us one particular solution. It's trivial to see, that we receive all solutions on $\mathbb{Z}$ for
+\begin{alignat}{3}
+	x_{j}^{\left(1\right)} = \left(2\left(x_{i}^{\left(1\right)} + 1\right) + 1\right)z^{\left(1,2\right)} &+ \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)\left(x_{i}^{\left(1\right)} + 1\right) \label{eq:solxj1delta1_all} \\
+	x_{j}^{\left(2\right)} = \left(2x_{i}^{\left(1\right)} + 1\right)z^{\left(1,2\right)} &+ \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)} \label{eq:solxj2delta1_all},
+\end{alignat}
+with $z^{\left(1,2\right)} \in \mathbb{Z}$.
+
+
+
+
+
+
+
+
+
+

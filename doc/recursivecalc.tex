@@ -90,70 +90,62 @@ and a maximum value for $x_{j} = 1$.
 	\item Known prime number range for $y_{i,j}$: $[1,9]$
 \end{itemize}
 
-
-
-
-
 %--------------------------------------------------
-%\section{Recursion step: $n^{\left(0\right)} = 0$}
-%\label{s:recursionstepn0_0}
+\section{Recursion step: $n^{\left(0\right)} = 2$}
+\label{s:recursionstepn0_2}
 %--------------------------------------------------
-%We start our calculation with an easy consideration. We assume, we know $3=2\cdot 1 + 1$ and $5=2\cdot2 + 1$ are prime numbers. Hence, we know
-%\begin{alignat}{3}
-%	y_{1,j}^{\left(1\right)}\left(1,x_{j}^{\left(1\right)}\right) &= 2\left(3x_{j}^{\left(1\right)} + 1 - \mu\left(1\right)\right) + 1 \notag \\
-%	\mu\left(1\right) &= 1, 2 \label{eq:eqsn0_0_1} \\
-%	\mathrm{and} \quad y_{2,j}^{\left(2\right)}\left(2,x_{j}^{\left(2\right)}\right) &= 2\left(5x_{j}^{\left(2\right)} + 2 - \mu\left(2\right)\right) + 1 \notag \\
-%	\mu\left(1\right) &= 1,2,3,4 \label{eq:eqsn0_0_2}
-%\end{alignat}
-%and want to calculate the intersection
-%\begin{alignat}{3}
-%	3x_{j}^{\left(1\right)} + 1 - \mu\left(1\right) = 5x_{j}^{\left(2\right)} + 2 - \mu\left(2\right).
-%\label{eq:intn0_0}
-%\end{alignat}
+%--------------------------------------------------
+\subsection{Calculation}
+\label{ss:calcualtionstepn0_2}
+%--------------------------------------------------
+Now, from our steps above we have 
+\begin{alignat}{3}
+	x\left(1,x_{j}^{\left(1\right)}\right) &= 3\cdot x_{j}^{\left(1\right)} + 1 - \mu\left(1\right) \label{eq:stepn0_2_eq3} \\
+	x\left(2,x_{j}^{\left(2\right)}\right) &= 5\cdot x_{j}^{\left(2\right)} + 2 - \mu\left(2\right) \label{eq:stepn0_2_eq5} \\
+	x\left(3,x_{j}^{\left(3\right)}\right) &= 7\cdot x_{j}^{\left(3\right)} + 3 - \mu\left(3\right), \label{eq:stepn0_2_eq7}
+\end{alignat} 
 
-%Now, we can choose between different angle of views, how we solve this intersection and how we handle the whole situation for our next recursion step.
+with $\mu\left(1\right) = 1,2$, $\mu\left(2\right) = 1,2,3,4$ and $\mu\left(3\right) = 1,2,3,4,5,6$. Let's have a look at the values (including $\mu = 0$).
 
-%\vspace{0.3cm}
-%Version 1:
+\begin{table}[H]
+\centering
+\caption{The first values for $x_{i,j}$ are marked in bold. Italic values are within the not describable range.}
+\begin{tabular}{c|ccccccccccccccccccc}
+\hline	$x_{1,j}$ & \textit{1} & 2 & 3 & \textbf{4} & 5 & 6 & \textbf{7} & 8 & 9 & \textbf{10} & 11 & 12 & \textbf{13} & 14 & 15 & \textbf{16} & 17 & 18 & \textbf{19} \\
+	$x_{2,j}$ & \textit{1} & \textit{2} & 3 & 4 & 5 & 6 & \textbf{7} & 8 & 9 & 10 & 11 & \textbf{12} & 13 & 14 & 15 & 16 & \textbf{17} & 18 & 19 \\
+	$x_{3,j}$ & \textit{1} & \textit{2} & \textit{3} & 4 & 5 & 6 & 7 & 8 & 9 & \textbf{10} & 11 & 12 & 13 & 14 & 15 & 16 & \textbf{17} & 18 & 19
+	%$x_{5,j}$ & \textit{1} & \textit{2} & \textit{3} & \textit{4} & \textit{5} & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & \textbf{16} & 17 & 18 & 19
+\end{tabular}
+\label{tab:stepn0_2_values357}
+\end{table}
 
-%The way to go ...
-%\begin{enumerate}
-%	\item We fix: The whole set of valid $\mu\left(1\right) - \mu\left(2\right)$ values is allowed.
-%	\item We determine the solutions for $x_{j}^{\left(1\right)}$ respectively $x_{j}^{\left(2\right)}$ without consideration of any definition ranges for $x_{j}$'s and the final range of interest.
-%	\item ...
-%	\item ...
-%\label{en:n0_0_v1way}
-%\end{enumerate}
+Now, at this point we have different possible ways, how we can calculate more primes from this. We will discuss this different ways step by step.\\
+At first, we make an intersection between (\ref{eq:stepn0_2_eq3}) and (\ref{eq:stepn0_2_eq5})
+\begin{alignat}{3}
+	0 &= 3\cdot x_{j}^{\left(1\right)} - 5\cdot x_{j}^{\left(2\right)} + 1 - 2 - \mu\left(1\right)  + \mu\left(2\right) \notag \\
+	  &= 3\cdot x_{j}^{\left(1\right)} - 5\cdot x_{j}^{\left(2\right)} -1 - \mu\left(1\right)  + \mu\left(2\right). \label{eq:step0_2_int35}
+\end{alignat}
 
-%The calculation ...
-%\begin{enumerate}
-%	\item Trivial: $\mu\left(1\right) - \mu\left(2\right) = \{1,2\} - \{1,2,3,4\} = \{-3,\dots,1\}$
-%	\item 
-%		\begin{alignat}{3}
-%			3x_{j}^{\left(1\right)} - 5x_{j}^{\left(2\right)} &= 1 + \mu\left(1\right) - \mu\left(2\right) \notag \\
-%			x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)} &= \frac{1}{3}\left(2x_{j}^{\left(2\right)} + 1 + \mu\left(1\right) - \mu\left(2\right)\right) \label{eq:intn0_0_v1calc0}
-%		\end{alignat}
-	
-%		The right side of (\ref{eq:intn0_0_v1calc0}) has to be an integer. We can directly see one valid soulution. Be
-%		\begin{equation}
-%			x_{j}^{\left(2\right)} = 1 + \mu\left(1\right) - \mu\left(2\right)
-%		\label{eq:intn0_0_v1calc1}
-%		\end{equation}
-		
-%		which we put into (\ref{eq:intn0_0_v1calc0}) and receive
-%		\begin{equation}
-%			 x_{j}^{\left(1\right)} = 2\left(1 + \mu\left(1\right) - \mu\left(2\right)\right).
-%		\label{eq:intn0_0_v1calc2}
-%		\end{equation}
+From the main section prior to this, we know our solutions with (\ref{eq:solxj1delta1_all}) and (\ref{eq:solxj2delta1_all}).
+\begin{alignat}{3}
+	x_{j}^{\left(1\right)} &= 5z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)2 \label{eq:step0_2_sol35_1} \\
+	x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)1 \label{eq:step0_2_sol35_2},
+\end{alignat}
+$z^{\left(1,2\right)} \in \mathbb{Z}$.
 
-%		Finally, we have all possible solutions for
-%		\begin{alignat}{3}
-%			x_{j}^{\left(1\right)} &= 5z^{\left(1,2\right)} + 2\left(1 + \mu\left(1\right) - \mu\left(2\right)\right) \label{eq:int0_0_v1calcsol1}\\
-%			x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + 1\left(1 + \mu\left(1\right) - \mu\left(2\right)\right), \label{eq:int0_0_v1calcsol2}
-%		\end{alignat}
-%		$z^{\left(1,2\right)} \in \mathbb{Z}$.
 
-%	\item ...
-%	\item ...
-%\label{en:n0_0_v1calc}
-%\end{enumerate}
+
+% ======
+%If we look at the values of all three equations, we see that our maximum valid range is now $[4,10]$ given by (\ref{eq:stepn0_2_eq7}) with $x_{j}^{\left(3\right)} = 1$.\\
+% ======
+
+
+
+
+
+
+
+
+
+
+
