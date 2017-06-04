@@ -210,6 +210,98 @@ The equations (\ref{eq:solxj2delta1}) and (\ref{eq:solxj1delta1}) give us one pa
 \end{alignat}
 with $z^{\left(1,2\right)} \in \mathbb{Z}$.
 
+\vspace{0.3cm}
+Now, we switch to the general case for $\Delta x_{i}^{\left(1,2\right)}$. We start again with
+\begin{alignat}{3}
+	0 &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - 2\Delta x_{i}^{\left(1,2\right)} x_{j}^{\left(2\right)} - \Delta x_{i}^{\left(1,2\right)} - \mu\left(x_{i}^{\left(1\right)}\right) + \mu\left(x_{i}^{\left(2\right)}\right) \notag \\
+	& = \left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - \left(2x_{i}^{\left(1\right)} + 1\right)^{-1} \left(2\Delta x_{i}^{\left(1,2\right)}x_{j}^{\left(2\right)} + \Delta x_{i}^{\left(1,2\right)} + \mu\left(x_{i}^{\left(1\right)} \right) - \mu\left(x_{i}^{\left(2\right)}\right)\right). \label{eq:intersection2_caseDeltaxgen_s1}
+\end{alignat}
+
+We can see that our Ansatz from the case $\Delta x_{i}^{\left(1,2\right)} = 1$ not works anymore, since we find $\Delta x_{i}^{\left(1,2\right)}$ only in two of our four terms in the second part of equation (\ref{eq:intersection2_caseDeltaxgen_s1}), and hence it is not possible to factor out it.\\
+But we will see, that it only seems to be not possible. In fact, it is possible!\\
+
+Let's look at $\mu\left(x_{i}\right)$ for our considerations. We know our belonging equation
+\[ x_{i,j} = \left(2x_{i} + 1\right)x_{j} + x_{i} - \mu\left(x_{i}\right), \quad \mu\left(x_{i}\right) = 1,\dots,2x_{i}, \quad \mu\left(x_{i}\right) \in \mathbb{N}. \]
+Now, we will assume, we have $\mu\left(x_{i}\right) \rightarrow \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right)$ instead. With this transition, we get two questions, which are important to be answered.
+%=======================================================================================
+\begin{enumerate}
+	\item For which values of $\Delta x_{i}^{\left(1,2\right)}$ we receive divisible solutions for $y_{i,j}\left(x_{i,j}\right)$ and hence, which values for $\Delta x_{i}^{\left(1,2\right)}$ are prohibited?\\
+
+	We have the following two equations
+	\begin{alignat}{3}
+		x_{i,j}\prime &= \left(2x_{i} + 1\right)x_{j}\prime + x_{i} \label{eq:question1_div} \\
+		x_{i,j} &= \left(2x_{i} + 1\right)x_{j} + x_{i} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right) \label{eq:question1_notdiv}.
+	\end{alignat}
+	$x_{i,j}\prime$ gives us all divisible numbers and $x_{i,j}$ all not-divisible numbers for one particular multiplication table given by $x_{i}$. We make the intersection and receive
+	\begin{alignat}{3}
+		0 &= \left(2x_{i} + 1\right)\left(x_{j} - x_{j}\prime\right) - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right). \label{eq:question1_intersec}
+	\end{alignat}
+
+	Later, in our recursive calculation steps, we will see, that $\left(2x_{i} + 1\right)$ is always a prime. Since also $\mu\left(x_{i}\right) = 1, \dots, 2x_{i}$, it follows from this two conditions and the uniqueness of prime factorization, that (\ref{eq:question1_intersec}) is only be fulfilled for $\Delta x_{i}^{\left(1,2\right)} = n\left(2x_{i} + 1\right)$, $n \in \mathbb{Z}$.\\
+
+	Thankfully, this case can never happen during our recursive prime number calculation! If we would choose $\Delta x_{i}^{\left(1,2\right)} = n\left(2x_{i} + 1\right)$, we would land on our divisible numbers for this multiplication table, and that is exactly NOT, what we want. Hence, we don't have this case.
+
+	\item Is the result of the transition $\mu\left(x_{i}\right) \rightarrow \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right)$ still surjective?\\
+
+	We take
+	\begin{alignat}{3}
+		x_{i,j} &= \left(2x_{i} + 1\right)x_{j} + x_{i} - \mu\left(x_{i}\right) \label{eq:question2_eq1} \\
+		x_{i,j}\prime &= \left(2x_{i} + 1\right)x_{j}\prime + x_{i} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right) \label{eq:question2_eq2}.
+	\end{alignat}
+	$x_{i,j}$ is the equation before and $x_{i,j}$ after the transition. For the intersection, we receive
+	\begin{alignat}{3}
+		0 &= \left(2x_{i} + 1\right)\left(x_{j} - x_{j}\prime\right) - \mu\left(x_{i}\right)\left(1 - \Delta x_{i}^{\left(1,2\right)}\right) \label{eq:question2_intersec} \\
+		\Leftrightarrow \quad \mu\left(x_{i}\right) &= \left(2x_{i} + 1\right)\left(x_{j} - x_{j}\prime\right)\left(1 - \Delta x_{i}^{\left(1,2\right)}\right)^{-1}. \label{eq:question2_intersec}
+	\end{alignat}
+
+	We know $\left(2x_{i} + 1\right)$ is prime, hence $\left(x_{j} - x_{j}\prime\right)$ has to be divisible. $x_{j}$ and $\Delta x_{i}^{\left(1,2\right)}$ are fixed. Because $x_{j}\prime$ is variable we have a valid solution for every combination of $x_{j}$ and $\Delta x_{i}^{\left(1,2\right)}$.
+
+\label{en:transitionquestions}
+\end{enumerate}
+
+After getting our answers to this two questions, let's go back to our original problem.\\
+
+The results of our questions show that it isn't a problem, to apply the transition $\mu\left(x_{i}\right) \rightarrow \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right)$ on our equation (\ref{eq:intersection2_caseDeltaxgen_s1})
+\begin{alignat}{3}
+	0 & = \left(x_{j}^{\left(1\right)} - x_{j}^{\left(2\right)}\right) - \left(2x_{i}^{\left(1\right)} + 1\right)^{-1} \Delta x_{i}^{\left(1,2\right)}\left(2x_{j}^{\left(2\right)} + 1 + \mu\left(x_{i}^{\left(1\right)} \right) - \mu\left(x_{i}^{\left(2\right)}\right)\right). \label{eq:intersection2_caseDeltaxgen_s2_transition_s1}
+\end{alignat}
+
+Because we know that $\Delta x_{i}^{\left(1,2\right)} \neq 2x_{i}^{\left(1\right)} + 1$, we can do this without concerns. If we compare (\ref{eq:intersection2_caseDeltaxgen_s2_transition_s1}) with (\ref{eq:intersection2_caseDeltax1_s1}) from our $\Delta x_{i}^{\left(1,2\right)} = 1$ case, we see that our new equation differs from the old one, only by the factor $\Delta x_{i}^{\left(1,2\right)}$ in front of the second term.\\
+
+Now, let be again
+\begin{equation}
+	x_{j}^{\left(2\right)} = \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)}.
+\label{eq:solxj2deltagen}
+\end{equation}
+
+After analog calculation of our prior case, we receive
+\begin{equation}
+	x_{j}^{\left(1\right)} = \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)\left(x_{i}^{\left(1\right)} + \Delta x_{i}^{\left(1,2\right)}\right).
+\label{eq:solxj1deltagen}
+\end{equation}
+
+For all solutions on $\mathbb{Z}$ we have
+\begin{alignat}{3}
+	x_{j}^{\left(1\right)} = \left(2\left(x_{i}^{\left(1\right)} + \Delta x_{i}^{\left(1,2\right)}\right) + 1\right)z^{\left(1,2\right)} &+ \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)\left(x_{i}^{\left(1\right)} + \Delta x_{i}^{\left(1,2\right)}\right) \label{eq:solxj1deltagen_all} \\
+	x_{j}^{\left(2\right)} = \left(2x_{i}^{\left(1\right)} + 1\right)z^{\left(1,2\right)} &+ \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)} \label{eq:solxj2deltagen_all},
+\end{alignat}
+with $z^{\left(1,2\right)} \in \mathbb{Z}$.\\
+
+But have attention, that this is the solution for 
+\begin{alignat}{3}
+	x_{i,j}^{\left(1\right)}\left(x_{i}^{\left(1\right)}, x_{j}^{\left(1\right)}\right) &= \left(2x_{i}^{\left(1\right)} + 1\right)x_{j}^{\left(1\right)} + x_{i}^{\left(1\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(1\right)}\right) \label{eq:xijeq_new1} \\
+	x_{i,j}^{\left(2\right)}\left(x_{i}^{\left(2\right)}, x_{j}^{\left(2\right)}\right) &= \left(2x_{i}^{\left(2\right)} + 1\right)x_{j}^{\left(2\right)} + x_{i}^{\left(2\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(2\right)}\right) \label{eq:xijeq_new2}
+\end{alignat}
+now! $\mu\left(x_{i}^{\left(1\right)}\right)$ and $\mu\left(x_{i}^{\left(2\right)}\right)$ are the same like before!
+
+
+
+
+
+
+
+
+
 
 
 
