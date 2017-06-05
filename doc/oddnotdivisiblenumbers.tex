@@ -223,7 +223,7 @@ But we will see, that it only seems to be not possible. In fact, it is possible!
 Let's look at $\mu\left(x_{i}\right)$ for our considerations. We know our belonging equation
 \[ x_{i,j} = \left(2x_{i} + 1\right)x_{j} + x_{i} - \mu\left(x_{i}\right), \quad \mu\left(x_{i}\right) = 1,\dots,2x_{i}, \quad \mu\left(x_{i}\right) \in \mathbb{N}. \]
 Now, we will assume, we have $\mu\left(x_{i}\right) \rightarrow \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}\right)$ instead. With this transition, we get two questions, which are important to be answered.
-%=======================================================================================
+
 \begin{enumerate}
 	\item For which values of $\Delta x_{i}^{\left(1,2\right)}$ we receive divisible solutions for $y_{i,j}\left(x_{i,j}\right)$ and hence, which values for $\Delta x_{i}^{\left(1,2\right)}$ are prohibited?\\
 
@@ -293,16 +293,72 @@ But have attention, that this is the solution for
 	x_{i,j}^{\left(2\right)}\left(x_{i}^{\left(2\right)}, x_{j}^{\left(2\right)}\right) &= \left(2x_{i}^{\left(2\right)} + 1\right)x_{j}^{\left(2\right)} + x_{i}^{\left(2\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(2\right)}\right) \label{eq:xijeq_new2}
 \end{alignat}
 now! $\mu\left(x_{i}^{\left(1\right)}\right)$ and $\mu\left(x_{i}^{\left(2\right)}\right)$ are the same like before!
+%--------------------------------------------------
+\section{Intersection of an arbitrary number of equations}
+\label{s:intarbitrarynumbeqs}
+%--------------------------------------------------
+Until now, we only had the intersection of two equations. Now we will switch to the case of an arbitrary number of equations. So, now, we have
+\begin{alignat}{3}
+	x_{i,j}^{\left(k\right)}\left(x_{i}^{\left(k\right)}, x_{j}^{\left(k\right)}\right) &= \left(2x_{i}^{\left(k\right)} + 1\right)x_{j}^{\left(k\right)} + x_{i}^{\left(k\right)} - \Delta x_{i}^{\left(k,k\prime\right)}\mu\left(x_{i}^{\left(k\right)}\right), \label{eq:intarbnumb_geneq}
+\end{alignat}
+with $k \in \mathbb{N}$, $k \neq k\prime$. Ok. What is the general solution of the intersection of $n$ equations? Let's start again with two equation. We receive
+\begin{alignat}{3}
+	x_{j}^{\left(1\right)} &= \left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} + \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(2\right)} \label{eq:step1_sol_xj1} \\
+	x_{j}^{\left(2\right)} &= \left(2x_{i}^{\left(1\right)} + 1\right)z^{\left(1,2\right)} + \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)} \label{eq:step1_sol_xj2}
+\end{alignat}
+and finally
+\begin{alignat}{3}
+	x_{i,j}^{\left(1,2\right)} =& \, x_{i,j}^{\left(1\right)}\left(x_{i}^{\left(1\right)},x_{j}^{\left(1\right)}\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)}
+	+ \left(2x_{i}^{\left(1\right)} + 1\right)\left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(2\right)} \notag \\  
+	&+ x_{i}^{\left(1\right)} - \left(x_{i}^{\left(2\right)} - x_{i}^{\left(1\right)}\right)\mu\left(x_{i}^{\left(1\right)}\right) \notag \\
+	=& \ \underbrace{\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)}_{=: \, 2x_{i}^{\left(1,2\right)} + 1}z^{\left(1,2\right)}
+	+ \underbrace{2x_{i}^{\left(1\right)}x_{i}^{\left(2\right)} + x_{i}^{\left(1\right)} + x_{i}^{\left(2\right)}}_{=: \, x_{i}^{\left(1,2\right)}} \notag \\
+	&- \left(\underbrace{-\mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(1\right)}\left(2x_{i}^{\left(2\right)} + 1\right)
+	+ \mu\left(x_{i}^{\left(2\right)}\right)x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right)}_{=: \, \mu\left(x_{i}^{\left(1,2\right)}\right)}\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1,2\right)} + 1\right)z^{\left(1,2\right)} + x_{i}^{\left(1,2\right)} - \mu\left(x_{i}^{\left(1,2\right)}\right). \label{eq:step1_sol_xij12}
+\end{alignat}
 
+In (\ref{eq:step1_sol_xij12}), we make the transition $\mu\left(x_{i}^{\left(1,2\right)}\right) \rightarrow \Delta x_{i}^{\left(\left(1,2\right),3\right)}\mu\left(x_{i}^{\left(1,2\right)}\right)$ for the intersection with the third equation. We have
+\begin{alignat}{3}
+	z^{\left(1,2\right)} &= \left(2x_{i}^{\left(3\right)} + 1\right)z^{\left(\left(1,2\right),3\right)} + \left(1 + \mu\left(x_{i}^{\left(1,2\right)}\right) - \mu\left(x_{i}^{\left(3\right)}\right)\right)x_{i}^{\left(3\right)} \label{eq:step1_sol_z12} \\
+	x_{j}^{\left(3\right)} &= \left(2x_{i}^{\left(1,2\right)} + 1\right)z^{\left(\left(1,2\right),3\right)} + \left(1 + \mu\left(x_{i}^{\left(1,2\right)}\right) - \mu\left(x_{i}^{\left(3\right)}\right)\right)x_{i}^{\left(1,2\right)} \label{eq:step1_sol_xj3}
+\end{alignat}
+and finally
+\begin{alignat}{3}
+	x_{i,j}^{\left(\left(1,2\right),3\right)} =& \, x_{i,j}^{\left(1,2\right)}\left(x_{i}^{\left(1,2\right)},z^{\left(1,2\right)}\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1,2\right)} + 1\right)\left(2x_{i}^{\left(3\right)} + 1\right)z^{\left(\left(1,2\right),3\right)}
+	+ \left(2x_{i}^{\left(1,2\right)} + 1\right)\left(1 + \mu\left(x_{i}^{\left(1,2\right)}\right) - \mu\left(x_{i}^{\left(3\right)}\right)\right)x_{i}^{\left(3\right)} \notag \\  
+	&+ x_{i}^{\left(1,2\right)} - \left(x_{i}^{\left(3\right)} - x_{i}^{\left(1,2\right)}\right)\mu\left(x_{i}^{\left(1,2\right)}\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)\left(2x_{i}^{\left(3\right)} + 1\right)z^{\left(\left(1,2\right),3\right)}
+	+ 2x_{i}^{\left(1,2\right)}x_{i}^{\left(3\right)} + x_{i}^{\left(1,2\right)} + x_{i}^{\left(3\right)} \notag \\
+	&- \left(-\mu\left(x_{i}^{\left(1,2\right)}\right)x_{i}^{\left(1,2\right)}\left(2x_{i}^{\left(3\right)} + 1\right)
+	+ \mu\left(x_{i}^{\left(3\right)}\right)x_{i}^{\left(3\right)}\left(2x_{i}^{\left(1,2\right)} + 1\right)\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)\left(2x_{i}^{\left(3\right)} + 1\right)z^{\left(\left(1,2\right),3\right)} \notag \\
+	&+ \ 2^{2}x_{i}^{\left(1\right)}x_{i}^{\left(2\right)}x_{i}^{\left(3\right)} + 2^{1}\left(x_{i}^{\left(1\right)}x_{i}^{\left(3\right)} + x_{i}^{\left(2\right)}x_{i}^{\left(3\right)} + x_{i}^{\left(1\right)}x_{i}^{\left(2\right)}\right) + 2^{0}\left(x_{i}^{\left(1\right)} + x_{i}^{\left(2\right)} + x_{i}^{\left(3\right)}\right) \notag \\
+	&- \left(\mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(1\right)}\left(2x_{i}^{\left(2\right)} + 1\right)
+	- \mu\left(x_{i}^{\left(2\right)}\right)x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\right) \notag \\
+	&\cdot \left(2x_{i}^{\left(1\right)}x_{i}^{\left(2\right)} + x_{i}^{\left(1\right)} + x_{i}^{\left(2\right)}\right)\left(2x_{i}^{\left(3\right)} + 1\right) \notag \\
+	&- \left(\mu\left(x_{i}^{\left(3\right)}\right)x_{i}^{\left(3\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)\left(2x_{i}^{\left(3\right)} + 1\right)z^{\left(\left(1,2\right),3\right)} \notag \\
+	&+ \frac{1}{2}\left(\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)\left(2x_{i}^{\left(3\right)} + 1\right) - 1\right) \notag \\
+	&- \left(\mu\left(x_{i}^{\left(1\right)}\right) x_{i}^{\left(1\right)}\left(2x_{i}^{\left(2\right)} + 1\right)\frac{1}{2}\left(\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right) - 1\right)\left(2x_{i}^{\left(3\right)} + 1\right)\right) \notag \\
+	&- \left(-\mu\left(x_{i}^{\left(2\right)}\right) x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\frac{1}{2}\left(\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right) - 1\right)\left(2x_{i}^{\left(3\right)} + 1\right)\right) \notag \\
+	&- \left(\mu\left(x_{i}^{\left(3\right)}\right)x_{i}^{\left(3\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)\right). \label{eq:step1_sol_xij123}
+\end{alignat}
 
-
-
-
-
-
-
-
-
+For the case of the intersection of $n$ ($n > 1$) equations, we can write
+\begin{alignat}{3}
+	x_{i,j}^{\left(1 \dots n\right)} =& \ \prod_{k=1}^{n}\left(2x_{i}^{\left(k\right)} + 1\right)z^{\left(1 \dots n\right)} \notag \\
+	&+ \frac{1}{2} \left(\prod_{k=1}^{n} \left(2x_{i}^{\left(k\right)} + 1\right) - 1\right) \notag \\
+	&- \left(\left(-1\right)^{n+1}\mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(1\right)} \prod_{l\neq 1}^{n} \left(2x_{i}^{\left(l\right)} + 1\right) \prod_{f=1}^{n-2, n > 2} \left(\frac{1}{2}\left(\prod_{m=1}^{f+1} \left(2x_{i}^{\left(m\right)} + 1\right) - 1\right)\right) \right) \notag \\
+	&- \left(\sum_{k=2}^{n} \left(-1\right)^{n+k}\mu\left(x_{i}^{\left(k\right)}\right)x_{i}^{\left(k\right)} \prod_{l\neq k}^{n} \left(2x_{i}^{\left(l\right)} + 1\right) \prod_{f=1}^{n-k, n > 2} \left(\frac{1}{2} \left(\prod_{m=1}^{f+1} \left(2x_{i}^{\left(m\right)} + 1\right) - 1\right)\right)\right). \label{eq:gensol_neqs}
+\end{alignat}
+Here we used the definition
+\begin{equation}
+	\prod_{f=1}^{0} A_{f} := 1.
+\label{eq:defprod}
+\end{equation}
 
 
 
