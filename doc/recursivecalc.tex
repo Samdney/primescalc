@@ -2,7 +2,7 @@
 \label{ch:therecursivecalculation}
 \minitoc
 %--------------------------------------------------
-In this section, now, we do the final recursive calculation. To understand the deep structure we will do this by discussing the first steps by manually calculation. We will see, it exists different ways how you can look at each situation/problem in each step, hence this will mainly a discussion of this different ways.
+In this section, we do the final recursive calculation. To understand the deep structure we will do this by discussing the first steps by manually calculation. We will see, it exists different ways how you can look at each situation/problem in each step, hence this will mainly a discussion of this different ways.
 %--------------------------------------------------
 %--------------------------------------------------
 \section{Recursion step: $n^{\left(0\right)} = 0$}
@@ -61,7 +61,7 @@ What we can see from our table \ref{tab:stepn0_1_valuesfordiv3} are the next two
 We can describe this two numbers with (\ref{eq:repoddnotdivnumb}) and (\ref{eq:defmu}) by
 
 \begin{equation}
-	x\left(1,1\right) = 3\cdot 1 + 1 - \mu\left(1\right),
+	x_{1,1}\left(1,1\right) = 3\cdot 1 + 1 - \mu\left(1\right),
 \label{eq:stepn0_1_eqfordiv3res}
 \end{equation}
 with
@@ -80,6 +80,7 @@ and a maximum value for $x_{j} = 1$.
 	\item Known primes $y_{i,j}$: $5,7$
 	\item Known prime number range for $x_{i,j}$: $[2,4]$
 	\item Known prime number range for $y_{i,j}$: $[5,9]$
+	\item Describing prime equation: $x_{1,1}\left(1,1\right) = 3\cdot 1 + 1 - \mu\left(1\right)$, $\mu\left(1\right) = 1,2$
 \end{itemize}
 
 \textbf{From all steps until now}:
@@ -88,6 +89,7 @@ and a maximum value for $x_{j} = 1$.
 	\item Known primes $y_{i,j}$: $3,5,7$
 	\item Known prime number range for $x_{i,j}$: $[1,4]$
 	\item Known prime number range for $y_{i,j}$: $[1,9]$
+	\item Describing prime equation for $x_{i,j} \in [2,4]$: $x_{1,1}\left(1,1\right) = 3\cdot 1 + 1 - \mu\left(1\right)$, $\mu\left(1\right) = 1,2$
 \end{itemize}
 
 %--------------------------------------------------
