@@ -360,6 +360,51 @@ Here we used the definition
 \label{eq:defprod}
 \end{equation}
 
+Like in the section before, we have to take a look at the $\Delta x_{i}^{\left(\left(1,2\right),\, \dots\right)}$ values from our transition. Now, for the intersection of an arbitrary number of equations, we have the case of pre-factors of $z$ which are the product of the already calculated primes. Given be
+\begin{alignat}{3}
+	x_{i,j}^{\left(1 \dots n\right)} &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2 \dots n\right)} + 1\right)z^{\left(1 \dots n\right)} + x_{i}^{\left(1, \dots n\right)} - \Delta x_{i}^{\left(\left(1 \dots n\right),n+1\right)}\mu\left(x_{i}^{\left(1 \dots n\right)}\right) \label{eq:arbnumeqdeltaxtrans}
+\end{alignat}
+with
+\begin{equation}
+	\Delta x_{i}^{\left(\left(1 \dots n\right),n + 1\right)} = \left(2x_{i}^{\left(1\right)} + 1\right) \quad \mathrm{and} \quad \mu\left(x_{i}^{\left(1 \dots n\right)}\right) = 1, \dots, 2x_{i}^{\left(1 \dots n\right)}.
+\label{eq:deltaalphawcomfac}
+\end{equation}
+It's easy to see that this could lead to problems, since now, also the case $\mu\left(x_{i}^{1 \dots n}\right) = \left(2x_{i}^{\left(2 \dots n\right)} + 1\right)$ is possible and we would receive again the equation for divisible, instead of not-divisible numbers again.\\
+
+But thankfully, during our recursion for prime number generation, we will never have this case!\\
+
+Assume we would have given (\ref{eq:deltaalphawcomfac})
+\begin{alignat}{3}
+	x_{i,j}^{\left(1 \dots n\right)} =& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2 \dots n\right)} + 1\right)z^{\left(1 \dots n\right)} \notag \\
+	&+ \left(\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2 \dots n\right)} + 1\right) - 1\right)\frac{1}{2} \notag \\
+	& - \left(2x_{i}^{\left(1\right)} + 1\right)\mu\left(x_{i}^{\left(1 \dots n\right)}\right). \label{eq:deltafactorsense1}
+\end{alignat}
+
+Now, assume we would have $x_{i}^{\left(n+1\right)} = x_{i}^{\left(1 \dots n\right)} \pm \left(2x_{i}^{\left(1\right)} + 1\right)$. With this, we would receive
+\begin{alignat}{3}
+	x_{i,j}^{\left(n+1\right)} =& \ \left(2\left(\left(\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2 \dots n\right)} + 1\right) - 1\right)\frac{1}{2} \pm \left(2x^{\left(1\right)}_{i} + 1\right)\right) + 1\right)x_{j}^{\left(n+1\right)} \notag \\
+	&+ \left(\left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2 \dots n\right)} + 1\right) - 1\right)\frac{1}{2} \pm \left(2x_{i}^{\left(1\right)} + 1\right)\notag \\
+	&\pm \left(2x_{i}^{\left(1\right)} + 1\right)\mu\left(x_{i}^{\left(1 \dots n\right)} \pm \left(2x_{i}^{\left(1\right)} + 1\right)\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(\left(2x_{i}^{\left(2 \dots n\right)} + 1\right) \pm 2\right)x_{j}^{\left(n+1\right)} \notag \\
+	&+ \left(2x_{i}^{\left(1\right)} + 1\right)\left(\left(2x_{i}^{\left(2 \dots n\right)} + 1\right)\frac{1}{2} \pm 1\right) - \frac{1}{2} \notag \\
+	&\pm \left(2x_{i}^{\left(1\right)} + 1\right)\mu\left(x_{i}^{\left(1 \dots n\right)} \pm \left(2x_{i}^{\left(1\right)} + 1\right)\right) \notag \\
+	=& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(\left(2x_{i}^{\left(2 \dots n\right)} + 1\right) \pm 2\right)x_{j}^{\left(n+1\right)} \notag \\
+	&+ \ x_{i}^{\left(1\right)} + \left(2x_{i}^{\left(1\right)} + 1\right)\left(x^{\left(2 \dots n\right)} \pm 1\right) \notag \\ 
+	&\pm \left(2x_{i}^{\left(1\right)} + 1\right)\mu\left(x_{i}^{\left(1 \dots n\right)} \pm \left(2x_{i}^{\left(1\right)} + 1\right)\right). \label{eq:deltafactorsense2}
+\end{alignat}
+We can see that we get an equation for a multiplication table for which we have already done our recursion before. Since, the case $\Delta x_{i}^{\left(\left(1 \dots n\right),n + 1\right)} = \left(2x_{i}^{\left(1\right)} + 1\right)$ would make no sense for our recursion.
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
