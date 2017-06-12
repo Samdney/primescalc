@@ -92,6 +92,10 @@ and a maximum value for $x_{j} = 1$.
 	\item Describing prime equation for $x_{i,j} \in [2,4]$: $x_{1,1}\left(1,1\right) = 3\cdot 1 + 1 - \mu\left(1\right)$, $\mu\left(1\right) = 1,2$
 \end{itemize}
 
+Our first prime equation for $x_{i,j} \in [2,4]$:
+\begin{alignat}{3}
+	x_{1,1}\left(1,1,\mu\left(1\right)\right) = \left(2 \cdot 1 + 1\right)1 + 1 - \mu\left(1\right) \label{eq:resultstepn0_1}
+\end{alignat}
 %--------------------------------------------------
 \section{Recursion step: $n^{\left(0\right)} = 2$}
 \label{s:recursionstepn0_2}
@@ -100,11 +104,18 @@ and a maximum value for $x_{j} = 1$.
 \subsection{Calculation}
 \label{ss:calcualtionstepn0_2}
 %--------------------------------------------------
-Now, from our steps above we have 
+Now, from our steps above we have (\ref{eq:resultstepn0_1}) and hence 
 \begin{alignat}{3}
-	x_{1,j}\left(1,x_{j}^{\left(1\right)}\right) &= 3\cdot x_{j}^{\left(1\right)} + 1 - \Delta x_{i}^{\left(a,b\right)}\mu\left(1\right) \label{eq:stepn0_2_eq3} \\
-	x_{2,j}\left(2,x_{j}^{\left(2\right)}\right) &= 5\cdot x_{j}^{\left(2\right)} + 2 - \Delta x_{i}^{\left(a,b\right)}\mu\left(2\right) \label{eq:stepn0_2_eq5} \\
-	x_{3,j}\left(3,x_{j}^{\left(3\right)}\right) &= 7\cdot x_{j}^{\left(3\right)} + 3 - \Delta x_{i}^{\left(a,b\right)}\mu\left(3\right), \label{eq:stepn0_2_eq7}
+	x_{1,j}\left(1,x_{j}^{\left(1\right)},\mu\left(1\right)\right) =& \ 3x_{j}^{\left(1\right)} + 1 - \Delta x_{i}^{\left(a,b\right)}\mu\left(1\right) \notag \\ 
+	=& \ \left(2 \cdot 1 + 1\right)x_{j}^{\left(1\right)} + 1 - \Delta x_{i}^{\left(a,b\right)}\mu\left(1\right) \label{eq:stepn0_2_eq3} \\
+	x_{2,j}\left(2,x_{j}^{\left(2\right)},\mu\left(2\right)\right) =& \ 5x_{j}^{\left(2\right)} + 2 - \Delta x_{i}^{\left(a,b\right)}\mu\left(2\right) \notag \\
+	=& \ \left(2 \cdot 2 + 1\right)x_{j}^{\left(2\right)} + 2 - \Delta x_{i}^{\left(a,b\right)}\mu\left(2\right) \notag \\
+	=& \ \left(2 \cdot \left(\left(2 \cdot 1 + 1\right)1 + 1 - 2\right) + 1\right)x_{j}^{\left(2\right)} \notag \\
+	&+ \left(\left(2 \cdot 1 + 1\right)1 + 1 - 2\right) - \Delta x_{i}^{\left(a,b\right)}\mu\left(2\right) \label{eq:stepn0_2_eq5} \\
+	x_{3,j}\left(3,x_{j}^{\left(3\right)},\mu\left(3\right)\right) =& \ 7x_{j}^{\left(3\right)} + 3 - \Delta x_{i}^{\left(a,b\right)}\mu\left(3\right) \notag \\
+	=& \ \left(2 \cdot 3 + 1\right)x_{j}^{\left(3\right)} + 3 - \Delta x_{i}^{\left(a,b\right)}\mu\left(3\right) \notag \\
+	=& \ \left(2 \cdot \left(\left(2 \cdot 1 + 1\right)1 + 1 - 1\right) + 1\right)x_{j}^{\left(3\right)} \notag \\
+	&+ \left(\left(2 \cdot 1 + 1\right)1 + 1 - 1\right) - \Delta x_{i}^{\left(a,b\right)}\mu\left(3\right), \label{eq:stepn0_2_eq7}
 \end{alignat} 
 
 with $\mu\left(1\right) = 1,2$, $\mu\left(2\right) = 1,2,3,4$, $\mu\left(3\right) = 1,2,3,4,5,6$ and $a,b \in \{1,2,3\}$, $a\neq b$. Let's have a look at the values (including $\mu = 0$).
@@ -124,8 +135,8 @@ with $\mu\left(1\right) = 1,2$, $\mu\left(2\right) = 1,2,3,4$, $\mu\left(3\right
 Now, at this point, we have different possible ways, how we can calculate more primes from this. We will discuss this different ways step by step.\\
 At first, we make an intersection between (\ref{eq:stepn0_2_eq3}) and (\ref{eq:stepn0_2_eq5}), $\Delta x_{i}^{\left(1,2\right)} = 1$,
 \begin{alignat}{3}
-	0 &= 3\cdot x_{j}^{\left(1\right)} - 5\cdot x_{j}^{\left(2\right)} + 1 - 2 - \mu\left(1\right)  + \mu\left(2\right) \notag \\
-	  &= 3\cdot x_{j}^{\left(1\right)} - 5\cdot x_{j}^{\left(2\right)} - 1 - \mu\left(1\right)  + \mu\left(2\right). \label{eq:step0_2_int35}
+	0 &= 3x_{j}^{\left(1\right)} - 5x_{j}^{\left(2\right)} + 1 - 2 - \mu\left(1\right)  + \mu\left(2\right) \notag \\
+	  &= 3x_{j}^{\left(1\right)} - 5x_{j}^{\left(2\right)} - 1 - \mu\left(1\right)  + \mu\left(2\right). \label{eq:step0_2_int35}
 \end{alignat}
 
 From the main section prior to this, we know our solutions with (\ref{eq:solxj1delta1_all}) and (\ref{eq:solxj2delta1_all}).
@@ -133,23 +144,77 @@ From the main section prior to this, we know our solutions with (\ref{eq:solxj1d
 	x_{j}^{\left(1\right)} &= 5z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)2 \label{eq:step0_2_sol35_1} \\
 	x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)1 \label{eq:step0_2_sol35_2},
 \end{alignat}
-$z^{\left(1,2\right)} \in \mathbb{Z}$.\\
-
-Now, let's have a look at the intersection between (\ref{eq:stepn0_2_eq3}) and (\ref{eq:stepn0_2_eq7}), $\Delta x_{i}^{\left(1,3\right)} = 2$,
+$z^{\left(1,2\right)} \in \mathbb{Z}$ and finally
 \begin{alignat}{3}
-	0 &= 3\cdot x_{j}^{\left(1\right)} - 7\cdot x_{j}^{\left(2\right)} + 1 - 3 - 2\mu\left(1\right)  + 2\mu\left(3\right) \notag \\
-	  &= 3\cdot x_{j}^{\left(1\right)} - 7\cdot x_{j}^{\left(2\right)} - 2 - 2\mu\left(1\right)  + 2\mu\left(3\right). \label{eq:step0_2_int37}
+	x_{1,j}^{\left(1,2\right)} &= 3 \cdot 5 z^{\left(1,2\right)} + 3\left(1 + \mu\left(1\right) - \mu\left(2\right)\right)2 + 1 - \mu\left(1\right) \label{eq:step0_2_sol35_x1j_12_l1} \\
+	&= 3 \cdot 5 z^{\left(1,2\right)} + 7 + 5\mu\left(1\right) - 6\mu\left(2\right) \label{eq:step0_2_sol35_x1j_12_l2} \\
+	x_{2,j}^{\left(1,2\right)} &= 5 \cdot 3 z^{\left(1,2\right)} + 5\left(1 + \mu\left(1\right) - \mu\left(2\right)\right)1 + 2 - \mu\left(2\right) \label{eq:step0_2_sol35_x2j_12_l1} \\
+	&= 3 \cdot 5 z^{\left(1,2\right)} + 7 + 5\mu\left(1\right) - 6\mu\left(2\right). \notag %\label{eq:step0_2_sol35_x2j_12_l2}
 \end{alignat}
 
-Our solutions with (\ref{eq:solxj1deltagen_all}) and (\ref{eq:solxj2deltagen_all}) are
-\begin{alignat}{3}
-	x_{j}^{\left(1\right)} &= 7z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(3\right)\right)3 \label{eq:step0_2_sol35_1} \\
-	x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(3\right)\right)1 \label{eq:step0_2_sol35_2},
-\end{alignat}
-$z^{\left(1,2\right)} \in \mathbb{Z}$.\\
+Ok, we have our equation which generates all solutions for our intersection. But since we only want to generate primes with this equation, we have to restrict the valid range. So, what is the maximum valid range for $x_{i,j}$ after the intersection above?
+
+\begin{enumerate}
+	\item \textit{Lower bound}: This bound is easy to see. We know for each original equation of the form $x_{i,j}\left(x_{i},x_{j},\mu\left(x_{i}\right)\right) = \left(2x_{i} + 1\right)x_{j} + x_{i} - \Delta x_{i}^{\left(a,b\right)}\mu\left(x_{i}\right)$ that its lower bound is given by 
+	
+	\begin{alignat}{3}
+	x_{i,j}\left(x_{i},0,0\right) &= \left(2x_{i} + 1\right) \cdot 0 + x_{i} - 0  + 1 \label{eq:lowerbound1} \\
+	&= x_{i} + 1 \label{eq:lowerbound2} \\
+	\Leftrightarrow \quad x_{i,j}\left(x_{i},1,2x_{i}\right) &= \left(2x_{i} + 1\right) \cdot 1 + x_{i} - 2x_{i}. \label{eq:lowerbound3}
+	\end{alignat}
+	
+	If follows, for the intersection of $n$ equations for the lower bound
+	\begin{alignat}{3}
+		x_{i,j}^{\left(1 \dots n\right), \ \mathrm{lower \ bound}}\left(x_{i}^{\mathrm{max}},1,2x_{i}^{\mathrm{max}}\right) &= \left(2x_{i}^{\mathrm{max}} + 1\right) \cdot 1 + x_{i}^{\mathrm{max}} - 2x_{i}^{\mathrm{max}} \notag \\
+		&= x_{i}^{\mathrm{max}} + 1, \label{eq:lowerbound_neqs}
+	\end{alignat}
+	with $x_{i}^{\mathrm{max}} := \mathrm{max}\{ x_{i}^{\left(1\right)}, x_{i}^{\left(2\right)}, \dots, x_{i}^{\left(n-1\right)}, x_{i}^{\left(n\right)} \}$.
+
+	\item \textit{Upper bound}: We have again the intersection of $n$ equations. As first assumption we can set
+	
+	\begin{alignat}{3}
+		x_{i,j}\left(x_{i}^{\mathrm{max}} + 1,1,0\right) &= \left(2\left(x_{i}^{\mathrm{max}} + 1\right) + 1\right) \cdot 1 + \left(x_{i}^{\mathrm{max}} + 1\right), \label{eq:firstassumption}
+	\end{alignat}
+	with $x_{i}^{\mathrm{max}} := \mathrm{max}\{ x_{i}^{\left(1\right)}, x_{i}^{\left(2\right)}, \dots, x_{i}^{\left(n-1\right)}, x_{i}^{\left(n\right)} \}$. But if we look closer on our multiplication tables, we see,
+	\begin{alignat}{3}
+	x_{i,j}\left(x_{i}^{\mathrm{max}} + 1,1,0\right) &= \left(2\left(x_{i}^{\mathrm{max}} + 1\right) + 1\right) \cdot 1 + \left(x_{i}^{\mathrm{max}} + 1\right) \notag \\
+	&= \left(2 \cdot 1 + 1\right)\left(x_{i}^{\mathrm{max}} + 1\right) + 1, \label{eq:firstvalue}
+	\end{alignat}
+	that this values are also always an element of the multiplication table of three. Since we always use the three multiplication table equation for intersection calculation, we have this first values of every other multipliation table already given. This means, we can look for an higher upper bound. \\
+
+	Let's go to our next assumption and take the second value
+	\begin{alignat}{3}
+		x_{i,j}\left(x_{i}^{\mathrm{max}} + 1,2,0\right) &= \left(2\left(x_{i}^{\mathrm{max}} + 1\right) + 1\right) \cdot 2 + \left(x_{i}^{\mathrm{max}} + 1\right) \notag \\
+	&= \left(2 \cdot 2 + 1\right)\left(x_{i}^{\mathrm{max}} + 1\right) + 2. \label{eq:secondassumption}
+	\end{alignat}
+
+	Assume we already know all primes in the range $x_{i} \in [1,x_{i}^{\mathrm{s}}]$ after the s'th, $s \in \mathbb{N}_{0}$, recursion step, with $n$ equations. From this assumptions we can follow our valid maximum upper bound for the generation of the next primes
+	\begin{alignat}{3}
+		x_{i,j}^{\left(1 \dots n\right), \ \mathrm{upper \ bound}}\left(x_{i}^{\mathrm{max}}+1,x_{i}^{\mathrm{max}} + 1,0\right) =& \ \left(2\left(x_{i}^{\mathrm{max}}+1\right) + 1\right)\left(x_{i}^{\mathrm{max}}+1\right) \notag \\
+	&+ \left(x_{i}^{\mathrm{max}}+1\right) - 0 -1 \notag \\
+	=& \ 2\left(x_{i}^{\mathrm{max}}\right)^{2} + 6x_{i}^{\mathrm{max}} + 3, \label{eq:upperbound}
+	\end{alignat}
+	with $x_{i}^{\mathrm{max}} = x_{i}^{\mathrm{s}}$.
+\label{it:intbounds35_dis}
+\end{enumerate}
 
 
 
+
+% ======
+%Let's have a look at the intersection between (\ref{eq:stepn0_2_eq3}) and (\ref{eq:stepn0_2_eq7}), $\Delta x_{i}^{\left(1,3\right)} = 2$,
+%\begin{alignat}{3}
+%	0 &= 3x_{j}^{\left(1\right)} - 7x_{j}^{\left(2\right)} + 1 - 3 - 2\mu\left(1\right)  + 2\mu\left(3\right) \notag \\
+%	  &= 3x_{j}^{\left(1\right)} - 7x_{j}^{\left(2\right)} - 2 - 2\mu\left(1\right)  + 2\mu\left(3\right). \label{eq:step0_2_int37}
+%\end{alignat}
+
+%Our solutions with (\ref{eq:solxj1deltagen_all}) and (\ref{eq:solxj2deltagen_all}) are
+%\begin{alignat}{3}
+%	x_{j}^{\left(1\right)} &= 7z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(3\right)\right)3 \label{eq:step0_2_sol35_1} \\
+%	x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(3\right)\right)1 \label{eq:step0_2_sol35_2},
+%\end{alignat}
+%$z^{\left(1,2\right)} \in \mathbb{Z}$.\\
+% ======
 
 % ======
 %If we look at the values of all three equations, we see that our maximum valid range is now $[4,10]$ given by (\ref{eq:stepn0_2_eq7}) with $x_{j}^{\left(3\right)} = 1$.\\
