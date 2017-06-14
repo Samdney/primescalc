@@ -194,12 +194,41 @@ Ok, we have our equation which generates all solutions for our intersection. But
 	&+ \left(x_{i}^{\mathrm{max}}+1\right) - 0 -1 \notag \\
 	=& \ 2\left(x_{i}^{\mathrm{max}}\right)^{2} + 6x_{i}^{\mathrm{max}} + 3, \label{eq:upperbound}
 	\end{alignat}
-	with $x_{i}^{\mathrm{max}} = x_{i}^{\mathrm{s}}$.
-\label{it:intbounds35_dis}
+	with $x_{i}^{\mathrm{max}} = x_{i}^{\mathrm{s}}$. Finally, we determine the value of $x_{j}$ for an arbitrary multiplication table $x_{i}$ for our upper bound.
+	\begin{alignat}{3}
+		\left(2x_{i} + 1\right)x_{j} + x_{i} &= 2\left(x_{i}^{\mathrm{max}}\right)^{2} + 6x_{i}^{\mathrm{max}} + 3 \notag \\
+		\left(2x_{i} + 1\right)x_{j} &= 2\left(x_{i}^{\mathrm{max}}\right)^{2} + 6x_{i}^{\mathrm{max}} + 3 - x_{i} \notag \\
+		x_{j}^{\mathrm{upper \ bound}} &:= \left\lfloor \frac{1}{2x_{i} + 1}\left(2\left(x_{i}^{\mathrm{max}}\right)^{2} + 6x_{i}^{\mathrm{max}} + 3 - x_{i}\right) \right\rfloor \label{eq:xi_upperbound_onthreetable}
+	\end{alignat}	
+
+\label{en:intbounds35_dis}
 \end{enumerate}
 
+Since we know our maximum valid range for our first intersection, we can think how we can receive the belonging valid $z$ values as a function of all $\mu$'s, now.\\
+
+What we will need additionally, is the connection between the $z$-values for the equations of the same multiplication table $x_{i}$, but with different $\Delta x_{i}^{\left(a,b\right)}$-values.
+\begin{alignat}{3}
+	x_{j} &= \left(2x_{i} + 1\right)z + x_{i} + \Delta x_{i}^{\left(a,b\right)}\mu\left(x_{i}\right) \notag \\
+	x_{j} &= \left(2x_{i} + 1\right)z^{\prime} + x_{i} + \left(\Delta x_{i}^{\left(a,b\right)}\right)^{\prime}\mu\left(x_{i}\right) \notag \\ 
+	\Rightarrow \quad 0 &= \left(2x_{i} + 1\right)\left(z - z^{\prime}\right) + \left(\Delta x_{i}^{\left(a,b\right)} - \left(\Delta x_{i}^{\left(a,b\right)}\right)^{\prime}\right)\mu\left(x_{i}\right) \notag \\
+	\Leftrightarrow \quad z - z^{\prime} &= - \frac{\Delta x_{i}^{\left(a,b\right)} - \left(\Delta x_{i}^{\left(a,b\right)}\right)^{\prime}}{2x_{i} + 1} \mu\left(x_{i}\right) \label{eq:differentDeltaxforsamexi}
+\end{alignat}
 
 
+
+% ======
+%Let's look at (\ref{eq:step0_2_sol35_2}) again
+%\[ x_{j}^{\left(2\right)} = 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)1. \]
+% ======
+
+% ======
+%From this follows for our current example with $x_{i}^{\mathrm{max}} := 2$,
+%\begin{alignat}{3}
+%	x_{j}^{\left(1\right), \mathrm{upper \ bound}} &= \left\lfloor \frac{2}{3}\left(2^{2} + 1\right) \right\rfloor + 2 \cdot 2 \notag \\
+%	&= \left\lfloor \frac{10}{3} \right\rfloor + 4 \notag \\
+%	&= 7. \label{eq:upperbound35}
+%\end{alignat}
+% ======
 
 % ======
 %Let's have a look at the intersection between (\ref{eq:stepn0_2_eq3}) and (\ref{eq:stepn0_2_eq7}), $\Delta x_{i}^{\left(1,3\right)} = 2$,
