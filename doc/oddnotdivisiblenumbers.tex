@@ -391,50 +391,25 @@ Now, assume we would have $x_{i}^{\left(n+1\right)} = x_{i}^{\left(1 \dots n\rig
 	&\pm \left(2x_{i}^{\left(1\right)} + 1\right)\mu\left(x_{i}^{\left(1 \dots n\right)} \pm \left(2x_{i}^{\left(1\right)} + 1\right)\right). \label{eq:deltafactorsense2}
 \end{alignat}
 We can see that we get an equation for a multiplication table for which we have already done our recursion before. Since, the case $\Delta x_{i}^{\left(\left(1 \dots n\right),n + 1\right)} = \left(2x_{i}^{\left(1\right)} + 1\right)$ would make no sense for our recursion.
+\begin{comment} % This section is useless
 %--------------------------------------------------
 \section{Modification: Shifting of $x_{j}$}
 \label{s:modshiftingxj}
 %--------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 We will repeat the steps of the last two section but with a small modification, now. We will introduce a shifting of $x_{j}$. So at first, let's look at
-%\begin{alignat}{3}
-%	x_{i,j}^{\left(k\right)}\left(x_{i}^{\left(k\right)}, x_{j}^{\left(k\right)}\right) &= \left(2x_{i}^{\left(k\right)} + 1\right)x_{j}^{\left(k\right)} + x_{i}^{\left(k\right)} - \Delta x_{i}^{\left(k,k\prime\right)}\mu\left(x_{i}^{\left(k\right)}\right) + \left(2x_{i}^{\left(k\right)} + 1\right)s_{j}^{\left(k\right)} \notag \\
-%	\Leftrightarrow \quad &= \left(2x_{i}^{\left(k\right)} + 1\right)\left(\underbrace{x_{j}^{\left(k\right)} + s_{j}^{\left(k\right)}}_{=: \, x_{j,s}^{\left(k\right)}}\right) + x_{i}^{\left(k\right)} - \Delta x_{i}^{\left(k,k\prime\right)}\mu\left(x_{i}^{\left(k\right)}\right), \label{eq:intarbnumb_geneq_shift}
-%\end{alignat}
-%with $s_{j}^{\left(k\right)} \in \mathbb{Z}$. That's a small, but important modification, of equation (\ref{eq:intarbnumb_geneq}). This modification has a nice influence on our intersection and gives us new possibilities for finding a final solution. We have again two equations
-%\begin{alignat}{3}
-%	x_{i,j}^{\left(1\right)}\left(x_{i}^{\left(1\right)}, x_{j}^{\left(1\right)}\right) &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)}\right) + x_{i}^{\left(1\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(1\right)}\right) \label{eq:eq1_shifted} \\
-%	x_{i,j}^{\left(2\right)}\left(x_{i}^{\left(2\right)}, x_{j}^{\left(2\right)}\right) &= \left(2x_{i}^{\left(2\right)} + 1\right)\left(x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)}\right) + x_{i}^{\left(2\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(2\right)}\right) \label{eq:eq2_shifted}
-%\end{alignat}
-%and the solution of their intersection.
-%\begin{alignat}{3}
-%	x_{j,s}^{\left(1\right)} &:= x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)} &= \left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} + \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(2\right)} \label{eq:step1_sol_xj1_shifted} \\
-%	x_{j,s}^{\left(2\right)} &:= x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)} &= \left(2x_{i}^{\left(1\right)} + 1\right)z^{\left(1,2\right)} + \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)}. \label{eq:step1_sol_xj2_shifted}
-%\end{alignat}
-%We know, it can become difficult to see the $z^{\left(1,2\right)}$-values for receiving the valid $x_{j}$-range for our recursion step. With this new parameter $s_{j}$, we have the possibility to modify the right part of our soultion equations in such a way, which makes it easier to find our valid values, now. Our $x_{i,j}$ is of course the same like before.
+\begin{alignat}{3}
+	x_{i,j}^{\left(k\right)}\left(x_{i}^{\left(k\right)}, x_{j}^{\left(k\right)}\right) &= \left(2x_{i}^{\left(k\right)} + 1\right)x_{j}^{\left(k\right)} + x_{i}^{\left(k\right)} - \Delta x_{i}^{\left(k,k\prime\right)}\mu\left(x_{i}^{\left(k\right)}\right) + \left(2x_{i}^{\left(k\right)} + 1\right)s_{j}^{\left(k\right)} \notag \\
+	\Leftrightarrow \quad &= \left(2x_{i}^{\left(k\right)} + 1\right)\left(\underbrace{x_{j}^{\left(k\right)} + s_{j}^{\left(k\right)}}_{=: \, x_{j,s}^{\left(k\right)}}\right) + x_{i}^{\left(k\right)} - \Delta x_{i}^{\left(k,k\prime\right)}\mu\left(x_{i}^{\left(k\right)}\right), \label{eq:intarbnumb_geneq_shift}
+\end{alignat}
+with $s_{j}^{\left(k\right)} \in \mathbb{Z}$. That's a small, but important modification, of equation (\ref{eq:intarbnumb_geneq}). This modification has a nice influence on our intersection and gives us new possibilities for finding a final solution. We have again two equations
+\begin{alignat}{3}
+	x_{i,j}^{\left(1\right)}\left(x_{i}^{\left(1\right)}, x_{j}^{\left(1\right)}\right) &= \left(2x_{i}^{\left(1\right)} + 1\right)\left(x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)}\right) + x_{i}^{\left(1\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(1\right)}\right) \label{eq:eq1_shifted} \\
+	x_{i,j}^{\left(2\right)}\left(x_{i}^{\left(2\right)}, x_{j}^{\left(2\right)}\right) &= \left(2x_{i}^{\left(2\right)} + 1\right)\left(x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)}\right) + x_{i}^{\left(2\right)} - \Delta x_{i}^{\left(1,2\right)}\mu\left(x_{i}^{\left(2\right)}\right) \label{eq:eq2_shifted}
+\end{alignat}
+and the solution of their intersection.
+\begin{alignat}{3}
+	x_{j,s}^{\left(1\right)} &:= x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)} &= \left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} + \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(2\right)} \label{eq:step1_sol_xj1_shifted} \\
+	x_{j,s}^{\left(2\right)} &:= x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)} &= \left(2x_{i}^{\left(1\right)} + 1\right)z^{\left(1,2\right)} + \left(1 + \mu\left(x_{i}^{\left(1\right)}\right) - \mu\left(x_{i}^{\left(2\right)}\right)\right)x_{i}^{\left(1\right)}. \label{eq:step1_sol_xj2_shifted}
+\end{alignat}
+We know, it can become difficult to see the $z^{\left(1,2\right)}$-values for receiving the valid $x_{j}$-range for our recursion step. With this new parameter $s_{j}$, we have the possibility to modify the right part of our soultion equations in such a way, which makes it easier to find our valid values, now. Our $x_{i,j}$ is of course the same like before.
+\end{comment}
