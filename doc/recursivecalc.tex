@@ -221,29 +221,14 @@ What we will need additionally, is the connection between the $z$-values for the
 
 
 
+
+
+
+
+
 %Let's go back to our original problem and the solutions (\ref{eq:step0_2_sol35_1}) and (\ref{eq:step0_2_sol35_2}) and the final $x_{i,j}^{\left(1,2\right)}$ equation (\ref{eq:step0_2_sol35_x1j_12_l1}) - (\ref{eq:step0_2_sol35_x2j_12_l1}).\\
 
-%On the one hand, from (\ref{eq:lowerbound_neqs}) and (\ref{eq:upperbound}) respectively (\ref{eq:xi_upperbound_2xi+1table}) we know our valid parameter ranges. On the other hand, if we look at our solution equations for the intersection, we see that the valid values for $z^{\left(1,2\right)}$ are difficult to determine. So, this is the right point to introduce our shifting modification from the prior section. We have given
-%\begin{alignat}{3}
-%	x_{1,j}^{\left(1\right)}\left(1, x_{j}^{\left(1\right)}\right) &= 3\left(x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)}\right) + 1 - \mu\left(1\right) \label{eq:eq1_shifted_35_3} \\
-%	x_{2,j}^{\left(2\right)}\left(2, x_{j}^{\left(2\right)}\right) &= 5\left(x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)}\right) + 2 - \mu\left(2\right) \label{eq:eq2_shifted_35_5}
-%\end{alignat}
-%and
-%\begin{alignat}{3}
-%	x_{j,s}^{\left(1\right)} &:= x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)} &= 5z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)2 \label{eq:step1_sol_xj1_shifted_35} \\
-%	x_{j,s}^{\left(2\right)} &:= x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)1. \label{eq:step1_sol_xj2_shifted_25}
-%\end{alignat}
-
-%We start with the easier one of the last two equations, equation (\ref{eq:step1_sol_xj2_shifted_25}). Here, we have the term $\mu\left(1\right) - \mu\left(2\right)$, which makes it difficult to find our valid range of $z^{\left(1,2\right)}$ for given $x_{j}$. Hence, wie define an appropriate value for $s_{j}^{\left(2\right)}$, which can help us to solve this problem. We define
-%\begin{alignat}{3}
-%	s_{j}^{\left(2\right)} &:= -\mu\left(2\right).\label{eq:def_sj2_mu2}
-%\end{alignat}
-%With this follows
-%\begin{alignat}{3}
-%	x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + 1 + \mu\left(1\right) \label{eq:def_sj2_mu2_sol} \\
-%	&= 3\left(z^{\left(1,2\right)} + 1\right) + 1 - \mu\left(1\right). \label{eq:def_sj2_mu2_sol_shiftedZmod}
-%\end{alignat}
-%Equation (\ref{eq:def_sj2_mu2_sol}) is very familiar for us, apart from the sign in the last term. In (\ref{eq:def_sj2_mu2_sol_shiftedZmod}), we brought to our well known shape from our initial definition. Since $z^{\left(1,2\right)}$ is definied on $\mathbb{Z}$ this isn't a problem. But have attention, that through this shape switching the meaning of the relationship to the multiplication table values, the "impact direction of $\mu$", changed.
+%On the one hand, from (\ref{eq:lowerbound_neqs}) and (\ref{eq:upperbound}) respectively (\ref{eq:xi_upperbound_2xi+1table}) we know our valid parameter ranges. On the other hand, if we look at our solution equations for the intersection, we see that the valid values for $z^{\left(1,2\right)}$ are difficult to determine. 
 
 
 
@@ -252,13 +237,29 @@ What we will need additionally, is the connection between the $z$-values for the
 
 
 
+\begin{comment} WRONG!!!
+So, this is the right point to introduce our shifting modification from the prior section. We have given
+\begin{alignat}{3}
+	x_{1,j}^{\left(1\right)}\left(1, x_{j}^{\left(1\right)}\right) &= 3\left(x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)}\right) + 1 - \mu\left(1\right) \label{eq:eq1_shifted_35_3} \\
+	x_{2,j}^{\left(2\right)}\left(2, x_{j}^{\left(2\right)}\right) &= 5\left(x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)}\right) + 2 - \mu\left(2\right) \label{eq:eq2_shifted_35_5}
+\end{alignat}
+and
+\begin{alignat}{3}
+	x_{j,s}^{\left(1\right)} &:= x_{j}^{\left(1\right)} + s_{j}^{\left(1\right)} &= 5z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)2 \label{eq:step1_sol_xj1_shifted_35} \\
+	x_{j,s}^{\left(2\right)} &:= x_{j}^{\left(2\right)} + s_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + \left(1 + \mu\left(1\right) - \mu\left(2\right)\right)1. \label{eq:step1_sol_xj2_shifted_25}
+\end{alignat}
 
-
-
-
-
-
-
+We start with the easier one of the last two equations, equation (\ref{eq:step1_sol_xj2_shifted_25}). Here, we have the term $\mu\left(1\right) - \mu\left(2\right)$, which makes it difficult to find our valid range of $z^{\left(1,2\right)}$ for given $x_{j}$. Hence, wie define an appropriate value for $s_{j}^{\left(2\right)}$, which can help us to solve this problem. We define
+\begin{alignat}{3}
+	s_{j}^{\left(2\right)} &:= -\mu\left(2\right).\label{eq:def_sj2_mu2}
+\end{alignat}
+With this follows
+\begin{alignat}{3}
+	x_{j}^{\left(2\right)} &= 3z^{\left(1,2\right)} + 1 + \mu\left(1\right) \label{eq:def_sj2_mu2_sol} \\
+	&= 3\left(z^{\left(1,2\right)} + 1\right) + 1 - \mu\left(1\right). \label{eq:def_sj2_mu2_sol_shiftedZmod}
+\end{alignat}
+Equation (\ref{eq:def_sj2_mu2_sol}) is very familiar for us, apart from the sign in the last term. In (\ref{eq:def_sj2_mu2_sol_shiftedZmod}), we brought to our well known shape from our initial definition. Since $z^{\left(1,2\right)}$ is definied on $\mathbb{Z}$ this isn't a problem. But have attention, that through this shape switching the meaning of the relationship to the multiplication table values, the "impact direction of $\mu$", changed.
+\end{comment}
 
 % ======
 %Let's look at (\ref{eq:step0_2_sol35_2}) again
@@ -292,14 +293,3 @@ What we will need additionally, is the connection between the $z$-values for the
 % ======
 %If we look at the values of all three equations, we see that our maximum valid range is now $[4,10]$ given by (\ref{eq:stepn0_2_eq7}) with $x_{j}^{\left(3\right)} = 1$.\\
 % ======
-
-
-
-
-
-
-
-
-
-
-
