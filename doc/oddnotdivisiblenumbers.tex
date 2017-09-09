@@ -413,3 +413,28 @@ and the solution of their intersection.
 \end{alignat}
 We know, it can become difficult to see the $z^{\left(1,2\right)}$-values for receiving the valid $x_{j}$-range for our recursion step. With this new parameter $s_{j}$, we have the possibility to modify the right part of our soultion equations in such a way, which makes it easier to find our valid values, now. Our $x_{i,j}$ is of course the same like before.
 \end{comment}
+%--------------------------------------------------
+\begin{comment}
+\section{Re-Intersection of equations}
+\label{s:reintersectionofequations}
+%--------------------------------------------------
+We will look at a small and trivial topic. But nevertheless it is necessary to repeat this. Aussume we already did the intersection between two equations, which leads to our results (\ref{eq:solxj1deltagen_all}), (\ref{eq:solxj2deltagen_all}) and (\ref{eq:xijeq_new1}), (\ref{eq:xijeq_new2}). Now we will do the re-intersection of this results with
+\begin{equation}
+	x_{i,j}^{\left(1\right)}\left(x_{i}^{\left(1\right)},\tilde{x}_{j}^{\left(1\right)}\right) = \left(2x_{i}^{\left(1\right)} + 1\right)\tilde{x}_{j}^{\left(1\right)} + x_{i}^{\left(1\right)} - \Delta  x_{i}^{\left(\left(1,2\right),1\right)}\mu\left(x_{i}^{\left(1\right)}\right) % NOCH EQUATION NUMMER ANFUEGEN!!!
+\label{eq:re-int_eq1}\end{equation}
+again. We receive
+\begin{alignat}{3}
+	0 =& \ \left(2x_{i}^{\left(1\right)} + 1\right)\left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} - \left(2x_{i}^{\left(1\right)} + 1\right)\tilde{x}_{j}^{\left(1\right)} + 2x_{i}^{\left(1\right)}x_{i}^{\left(2\right)} + x_{i}^{\left(2\right)} \notag \\
+	&- \left(-\mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(1\right)}\left(2x_{i}^{\left(2\right)} + 1\right) + \mu\left(x_{i}^{\left(2\right)}\right)x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\right) \notag \\
+	&+ \left(2x_{i}^{\left(1\right)}x_{i}^{\left(2\right)} + x_{i}^{\left(1\right)} + x_{i}^{\left(2\right)} - x_{i}^{\left(1\right)}\right)\mu\left(x_{i}^{\left(1\right)}\right) \notag \\
+	\Leftrightarrow \quad \tilde{x}_{j}^{\left(1\right)} =& \ \left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} + x_{i}^{\left(2\right)} \notag \\
+	&+ \left(2x_{i}^{\left(1\right)} + 1\right)^{-1} \left(\mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(1\right)}\left(2x_{i}^{\left(2\right)} + 1\right) - \mu\left(x_{i}^{\left(2\right)}\right)x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\right) \notag \\
+	%&+ \left(2x_{i}^{\left(1\right)} + 1\right)^{-1} \left(x_{i}^{\left(2\right)}\mu\left(x_{i}^{\left(1\right)}\right) - x_{i}^{\left(1\right)}\mu\left(x_{i}^{\left(1\right)}\right)\right) \\
+	&+ x_{i}^{\left(2\right)}\mu\left(x_{i}^{\left(1\right)}\right) \notag \\
+	=& \ \left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} + x_{i}^{\left(2\right)} \notag \\
+	&+ \left(2x_{i}^{\left(1\right)} + 1\right)^{-1} \left(\mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right) - \mu\left(x_{i}^{\left(2\right)}\right)x_{i}^{\left(2\right)}\left(2x_{i}^{\left(1\right)} + 1\right)\right) \notag \\
+	=& \ \left(2x_{i}^{\left(2\right)} + 1\right)z^{\left(1,2\right)} + x_{i}^{\left(2\right)} + \mu\left(x_{i}^{\left(1\right)}\right)x_{i}^{\left(2\right)} - \mu\left(x_{i}^{\left(2\right)}\right)x_{i}^{\left(2\right)}
+	.\label{eq:re-int_int}
+\end{alignat}
+We see, we receive our already existing solution. This was trivial :).
+\end{comment}
