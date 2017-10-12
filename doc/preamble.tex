@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% preamble.tex
+% template-preamble 
+%
+% Author: Carolin Zöbelein
+% Email: contact@carolin-zoebelein.de
+% PGP: D4A7 35E8 D47F 801F 2CF6 2BA7 927A FD3C DE47 E13B
+% Initial date: 2016/10/21
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass{scrartcl}
+\documentclass{scrreprt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{footnote}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{minitoc}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\usepackage{verbatim}	% For block comments
+
+\usepackage{listings}
+\lstset{
+language=C,
+basicstyle=\small\sffamily,
+%basicstyle=\tiny\sffamily,
+numbers=left,
+numberstyle=\tiny,
+frame=tb,
+columns=fullflexible,
+showstringspaces=false
+}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+
+% Example: \mytitle{Title}
+\newcommand{\mytitle}[1]{#1}
+
+% Example: \mydate{1970/01/01}
+\newcommand{\mydate}[1]{#1}
+
+% Example: \myauthor{John Doe}
+\newcommand{\myauthor}[1]{#1}
+
+% Example: \authoremail{example@example.com, AAAA BBBB CCCC DDDD EEEE FFFF GGGG HHHH IIII JJJJ}
+\newcommand{\authoremail}[2]{\textit{E-mail address:} \texttt{#1}, \textit{PGP Fingerprint}: \texttt{#2}}
+
+% Example: \authorurl{http://www.example.com}
+\newcommand{\authorurl}[1]{\textit{URL:} \url{#1}}
+
+% Example: \keywords{keyword1, keyword2, keyword3}
+\newcommand{\keywords}[1]{\textbf{Keywords:} #1}
+
+% Example: \license{example license}
+\newcommand{\license}[1]{License: #1}
+
+% Example: \subjclass{2010}{Mathematics Subject Classification}{Primary 11N05}
+\newcommand{\subjclass}[3]{\textbf{Subjclass:} #1 \textit{#2}. #3.}

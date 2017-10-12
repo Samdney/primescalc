@@ -10,6 +10,5 @@
 *.blg
 *.bbl
 *.bst
-preamble.tex
 makepdf
 mystuff/
