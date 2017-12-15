@@ -1,0 +1,67 @@
+\chapter{Intersection of bit string representations}
+\label{ch:intersectionofbitstringrepresentations}
+\minitoc
+%-------------------------------------------------
+Now we look at the properties of an intersection of several bit strings.
+%--------------------------------------------------
+\section{Bit string addition}
+\label{s:bitstringaddition}
+%------------------------------------------------
+Aussume, two bit strings are given. The intersection of its representative times tables is a \textbf{bitwise} addition of two numbers.
+
+\begin{table}[H]
+\centering
+\caption{Bit string intersection for the case $x_{1} = 1$ and $x_{2} = 2$.}
+\tiny
+\begin{tabular}{cccccccccccccccccccccc||c}
+				\cellcolor{yellow} 22 & 21 & 20 & 19 & 18 & 17 & 16 & 15 & 14 & 13 & 12 & 11 & 10 & 9 & 8 & \cellcolor{yellow} 7 & 6 & 5 & 4 & 3 & 2 & 1 & \\
+\hline				21 & 20 & 19 & 18 & 17 & 16 & 15 & 14 & 13 & 12 & 11 & 10 & 9  & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1 & 0 & Index \\
+\hline\hline \rowcolor{green}   \cellcolor{cyan} 1 &  0 &  0 &  \cellcolor{red} 1 &  0 &  \cellcolor{red} 0 &  \cellcolor{red} 1 &  0 &  0 &  \cellcolor{red} 1 &  \cellcolor{red} 0 &  0 &  \cellcolor{red} 1 & 0 & 0 & \cellcolor{cyan} 1 & 0 & 0 & \cellcolor{red} 1 & 0 & 0 & 0 & $x_{1} = 1$ \\
+	     \rowcolor{green}   \cellcolor{cyan} 1 &  0 &  0 &  \cellcolor{red} 0 &  0 &  \cellcolor{red} 1 &  \cellcolor{red} 0 &  0 &  0 &  \cellcolor{red} 0 &  \cellcolor{red} 1 &  0 &  \cellcolor{red} 0 & 0 & 0 & \cellcolor{cyan} 1 & 0 & 0 & \cellcolor{red} 0 & 0 & 0 & 0 & $x_{2} = 2$ \\
+\hline	     \rowcolor{green}	 \cellcolor{cyan} 1 &  0 &  0 &  \cellcolor{red} 1 &  0 &  \cellcolor{red} 1 &  \cellcolor{red} 1 &  0 &  0 &  \cellcolor{red} 1 &  \cellcolor{red} 1 &  0 &  \cellcolor{red} 1 & 0 & 0 & \cellcolor{cyan} 1 & 0 & 0 & \cellcolor{red} 1 & 0 & 0 & 0 & sum \\
+\end{tabular}
+\label{tab:intersectionx1_1+x2_2}
+\end{table}
+
+Neat. But bitwise addition is not really nice to handle, if we want a closed solution for our problem!
+
+\vspace{0.3cm}
+But have a look at the cases in which we have the addition $1 \ \& \ 1$ (cyan), which belongs to the numbers 7 and 22 (yellow).\\
+In the next sections we will look for our valid lower and upper bounds, ranges and bits of our recursion and the belonging $x_{i,j}$ values. We will see that, in practice, we will never have the case of the addition of 1 and 1. This is great, since it means that we will be able to do a normal addition, instead of a bitwise addition!
+
+\vspace{0.3cm}
+Let's have a look, to understand, how we can reach this!
+%--------------------------------------------------
+\section{Intersection bounds, ranges and bits}
+\label{s:intersectionboundsandranges}
+%------------------------------------------------
+What are our recursion bounds, ranges and bits?
+%--------------------------------------------------
+\subsection{Lower bits}
+\label{ss:lowerbits}
+%------------------------------------------------
+Ok. If we look at equation (\ref{eq:xij_iconst}), we can see that it is symmetric for $x_{i}$ and $x_{j}$. Which means
+
+\begin{alignat}{3}
+	x_{i,j}\left(x_{i},x_{j}\right) :&= \left(2x_{i} + 1\right)x_{j} + x_{i} \notag \\
+					& = \left(2x_{j} + 1\right)x_{i} + x_{j} \notag \\
+					& = x_{i,j}\left(x_{j},x_{i}\right)
+\label{eq:sym}\end{alignat}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%------------------------------------------------
+% why we never have 22 => no intersection for x values which represented divisible numbers
+%------------------------------------------------
